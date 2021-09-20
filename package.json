@@ -1,0 +1,25 @@
+{
+  "name": "w2ui-starter",
+  "version": "1.0.0",
+  "description": "Boiler plate for your w2ui projects",
+  "main": "src/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitmalina/w2ui-starter.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitmalina/w2ui-starter/issues"
+  },
+  "homepage": "https://github.com/vitmalina/w2ui-starter#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-header": "^2.0.9",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-less": "^4.0.1",
+    "gulp-uglify": "^3.0.2"
+  }
+}
