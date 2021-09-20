@@ -1,0 +1,114 @@
+// *************************************************
+// ---- Document Structure
+//
+
+body {
+    overflow: hidden;
+    background-color: #FEFEFE;
+    * {
+        .box-sizing(border-box);
+    }
+}
+
+#app-container {
+    position: absolute;
+    top     : 0px;
+    left    : 0px;
+    right   : 0px;
+    bottom  : 0px;
+    display : none;
+
+    .app-logo {
+        position: relative;
+        top: -3px;
+    }
+    #app-header {
+        z-index : 2;
+        position: absolute;
+        top     : 0px;
+        left    : 0px;
+        right   : 0px;
+        height  : 60px;
+        box-shadow: 0px 0px 10px #dedede;
+        background-image: linear-gradient(#fff, #f5f5f5);
+        border-bottom: 1px solid #dedede;
+
+        // #app-icon {
+        //     display: inline-block;
+        //     position: absolute;
+        //     top: 10px;
+        //     left: 10px;
+        //     width: 40px;
+        //     height: 40px;
+        //     border: 1px solid silver;
+        //     border-radius: 3px
+        // }
+
+        // #app-title {
+        //     position: absolute;
+        //     top: 50px;
+        //     left: 80px;
+        //     color: #464646;
+        //     font-size: 22px;
+        // }
+
+        #app-toolbar {
+            float: right;
+            z-index : 3;
+            display: inline-table;
+            float: right;
+            padding : 14px 5px 0px 20px;
+            background-color: transparent;
+        }
+
+        #app-title {
+            float: left;
+            display: inline-block;
+            padding : 15px 15px 0px 20px;
+            font-family: verdana;
+            font-size: 20px;
+            color: #606060;
+            text-shadow: 0px 1px 2px #fff;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            .app-logo {
+                border: 1px solid silver;
+                border-radius: 3px;
+                height: 35px;
+                width: 35px;
+                position: absolute;
+                left: 15px;
+                top: 11px;
+            }
+
+            .app-caption {
+                margin-top: 4px;
+                margin-left: 45px;
+            }
+
+            .icon-chevron-right {
+                font-size: 15px;
+                position: relative;
+                top: -1px;
+                color: #8a8a8a;
+            }
+        }
+    }
+    #app-main {
+        z-index : 1;
+        position: absolute;
+        top     : 60px;
+        left    : 0px;
+        right   : 0px;
+        bottom  : 0px;
+        font-family: verdana;
+        font-size: 11px;
+        border-top: 1px solid white;
+    }
+}
+
+.w2ui-layout > div .w2ui-panel .w2ui-panel-content {
+    background-color: #F6F6F6;
+}

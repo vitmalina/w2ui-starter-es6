@@ -1,0 +1,121 @@
+/*************************************************
+* ---- Main Sidebar ----
+*/
+
+@bgcolor: #f8f8f8;
+
+.w2ui-sidebar {
+    background-color: @bgcolor !important;
+    font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+
+    .w2ui-sidebar-body {
+        padding-top: 7px;
+
+        .w2ui-node-group {
+            padding-left: 10px;
+            color: transparent;
+
+            :nth-child(2) {
+                text-transform: uppercase;
+                // font-variant: small-caps;
+                font-family:  Helvetica, Arial, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 12px;
+                letter-spacing: 0.5px;
+                color: #8fabca;
+            }
+        }
+
+        .w2ui-node {
+            padding: 3px 0px;
+            background-image: none;
+            background-color: @bgcolor;
+            margin: 0px 6px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+
+            &:hover {
+                border: 1px solid #EDEDED;
+                background-color: #f1f1f1;
+            }
+
+            .w2ui-node-data {
+                padding: 2px 0;
+            }
+
+            .w2ui-node-image {
+                padding: 1px 0px 0px 0px;
+                > span {
+                    padding: 1px 0 0 0;
+                    color: #888 !important;
+                    text-shadow: 1px 1px 1px #fff !important
+                }
+            }
+            .w2ui-node-caption {
+                font-size: 12px;
+                color: #444 !important;
+                text-shadow: 1px 1px 1px #fff !important;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        .w2ui-selected {
+            background-image: linear-gradient(#E9E9E9, #E9E9E9) !important;
+            background-image: -webkit-linear-gradient(#E9E9E9, #E9E9E9) !important;
+            border: 1px solid #E5E5E5;
+
+            .w2ui-node-image > span {
+                color: #333 !important;
+                text-shadow: 1px 1px 1px #eee !important
+            }
+
+            .w2ui-node-caption {
+                color: #333 !important;
+                text-shadow: 1px 1px 1px #eee !important
+            }
+
+            &:hover {
+                background-color: #EDEDED;
+                border: 1px solid #EDEDED;
+
+                .w2ui-node-image > span {
+                    color: #333 !important;
+                    text-shadow: 1px 1px 1px #eee !important
+                }
+
+                .w2ui-node-caption {
+                    color: #333 !important;
+                    text-shadow: 1px 1px 1px #eee !important
+                }
+            }
+        }
+
+        .w2ui-selected:before {
+          border-width: 0px;
+        }
+
+        .w2ui-show-expand .w2ui-expand{
+            color: black !important;
+        }
+    }
+
+    .w2ui-sidebar-flat {
+        .w2ui-node {
+            margin: 0px;
+            border-radius: 0px;
+        }
+    }
+
+    .w2ui-sidebar-top {
+        .w2ui-flat-left,
+        .w2ui-flat-right {
+            background-color: @bgcolor;
+        }
+
+        .w2ui-flat-left:hover,
+        .w2ui-flat-right:hover {
+            background-color: #EDEDED;
+        }
+    }
+}
