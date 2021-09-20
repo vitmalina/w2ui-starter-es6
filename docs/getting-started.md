@@ -50,5 +50,5 @@ router.add({
 ```
 
 See more:
-[Router](router.md)
-[ES6 Modules](es6-modules.md)
+- [Router](router.md)
+- [ES6 Modules](es6-modules.md)

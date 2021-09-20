@@ -37,6 +37,7 @@ gulp dev       # start watching .less and .svg files
 gulp build     # bundles project into /build folder
 ```
 
-[Getting Started](docs/getting-started.md)
-[ES6 Modules](es6-modules.md)
-[Router](router.md)
+See more:
+- [Getting Started](docs/getting-started.md)
+- [ES6 Modules](es6-modules.md)
+- [Router](router.md)
