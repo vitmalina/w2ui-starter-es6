@@ -1,4 +1,4 @@
-# w2ui-starter
+# w2ui-starter-es6
 
 `Work in progress... not ready yet`
 
