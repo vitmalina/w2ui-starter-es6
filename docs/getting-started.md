@@ -49,6 +49,6 @@ router.add({
  // - /home/some-other-module/view/some-id
 ```
 
-See more
-(Router)[router.md]
-(ES6 Modules)[es6-modules.md]
+See more:
+[Router](router.md)
+[ES6 Modules](es6-modules.md)
