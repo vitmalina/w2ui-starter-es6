@@ -1,6 +1,12 @@
 /* generated file, do not change */
+@font-face {
+  font-family: "OpenSans";
+  src: url("../libs/OpenSans/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
-  font-family: verdana;
+  font-family: OpenSans,verdana;
 }
 textarea {
   line-height: 140% !important;
