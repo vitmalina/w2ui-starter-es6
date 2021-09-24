@@ -31,6 +31,9 @@ app.router.add({
     }
 })
 app.main = { prefs }
+app.main.prefs.init({
+    "ui-sidebar-size":"large"
+})
 app.router.process()
 
 export default app.main
