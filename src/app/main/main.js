@@ -1,29 +1,30 @@
 import conf from './conf.js'
 import prefs from './prefs.js'
+import { w2toolbar, w2layout, w2sidebar, w2grid } from '../../libs/w2ui/w2ui.min.js'
 
-$().w2toolbar(conf.app_toolbar)
-$().w2layout(conf.app_layout)
-$().w2sidebar(conf.main_sidebar)
-$().w2grid(conf.main_grid)
+let app_layout = new w2layout(conf.app_layout)
+let app_tb = new w2toolbar(conf.app_tb)
+let main_sb = new w2sidebar(conf.main_sb)
+let main_grid = new w2grid(conf.main_grid)
 
 // display
-$('#app-toolbar').w2render('app_toolbar')
-$('#app-main').w2render('app_layout')
+$('#app-toolbar').w2render(app_tb)
+$('#app-main').w2render(app_layout)
 $('#app-container').fadeIn(50)
 
 app.router.add({
 
     '/home*'(event) {
-        w2ui.app_layout.html('left', w2ui.main_sidebar)
+        w2ui.app_layout.html('left', main_sb)
     },
 
     '/home'(event) {
-        w2ui.main_sidebar.select('home')
-        w2ui.app_layout.html('main', w2ui.main_grid)
+        w2ui.main_sb.select('home')
+        w2ui.app_layout.html('main', main_grid)
     },
 
     '/home/projects'(event) {
-        w2ui.main_sidebar.select('projects')
+        w2ui.main_sb.select('projects')
         w2ui.app_layout.html('main', `
             <div class="w2ui-centered" style="font-size: 16px; color: gray">
                 You can refresh this page, it will still come to this sidebar item

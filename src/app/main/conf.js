@@ -17,8 +17,8 @@ export default {
     },
 
     // --- Application Top Toolbar (if any)
-    app_toolbar: {
-        name  : 'app_toolbar',
+    app_tb: {
+        name  : 'app_tb',
         items : [
             { id: 'home', text: 'Home', type: 'radio', icon: 'icon-home', route: '/home' },
             { id: 'project', text: 'Projects', type: 'radio', icon: 'icon-flag', route: '/projects' },
@@ -36,8 +36,8 @@ export default {
     },
 
     // --- Application Top Toolbar (if any)
-    main_sidebar: {
-        name: 'main_sidebar',
+    main_sb: {
+        name: 'main_sb',
         nodes: [
             { id: 'general', text: 'General', icon: '', group: true, expanded: true,
                 nodes: [
