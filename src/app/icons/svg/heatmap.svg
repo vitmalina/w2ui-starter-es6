@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<rect x="43.438" y="43.787" width="117.662" height="117.662"/>
+<path d="M197.052,43.787v117.662h117.662V43.787H197.052z M283.431,130.166h-55.096V75.07h55.096V130.166z"/>
+<rect x="350.9" y="350.549" width="117.662" height="117.663"/>
+<rect x="350.9" y="43.787" width="117.662" height="117.662"/>
+<path d="M43.438,350.549v117.663H161.1V350.549H43.438z M129.816,436.928H74.721v-55.095h55.096V436.928z"/>
+<path d="M197.052,350.549v117.663h117.662V350.549H197.052z M283.431,436.928h-55.096v-55.095h55.096V436.928z"/>
+<path d="M350.9,197.402v117.662h117.662V197.402H350.9z M437.279,283.78h-55.097v-55.096h55.097V283.78z"/>
+<path d="M197.052,197.402v117.662h117.662V197.402H197.052z M283.431,283.78h-55.096v-55.096h55.096V283.78z"/>
+<rect x="43.438" y="197.402" width="117.662" height="117.662"/>
+</svg>

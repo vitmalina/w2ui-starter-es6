@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+<g id="icomoon-ignore">
+</g>
+<path d="M512 320v192h-512v-192h64v128h384v-128zM96 352h320v64h-320zM103.576 282.733l13.849-62.482 312.416 69.248-13.849 62.482zM139.829 154.279l27.046-58.003 290.016 135.232-27.046 58.003zM495.861 180.738l-38.961 50.775-253.873-194.804 28.168-36.709h29.122z" fill="#000000"></path>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350px" height="339px" viewBox="0 0 350 339" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="box-many" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path" points="0 0 260 0 240 20 20 20"></polygon>
+            <polygon id="Path" points="260 0 260 260 240 240 240 20"></polygon>
+            <polygon id="Path" points="260 260 0 260 20 240 240 240"></polygon>
+            <polygon id="Path" points="0 260 0 0 20 20 20 240"></polygon>
+        </g>
+        <g id="box-many" transform="translate(90.000000, 79.000000)" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path" points="0 0 260 0 240 20 20 20"></polygon>
+            <polygon id="Path" points="260 0 260 260 240 240 240 20"></polygon>
+            <polygon id="Path" points="260 260 0 260 20 240 240 240"></polygon>
+            <polygon id="Path" points="0 260 0 0 20 20 20 240"></polygon>
+        </g>
+    </g>
+</svg>
