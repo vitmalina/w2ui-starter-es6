@@ -45,19 +45,19 @@ let tasks = {
     less(cb) {
         // all *.less in each modeule
         return gulp
-            .src(['src/app/**/*.less', '!src/app/less/**/*.less'])
+            .src(['src/**/*.less', '!src/less/*.less'])
             .pipe(less({ cleancss : true }))
             .on('error', function (err) {
                 console.log(err.toString())
                 this.emit('end')
             })
             .pipe(header('/* generated file, do not change */\n'))
-            .pipe(gulp.dest('src/app'))
+            .pipe(gulp.dest('src'))
     },
 
     watch(cb) {
-        gulp.watch('src/app/**/*.less', tasks.less)
-        gulp.watch('src/app/icons/svg/*.svg', tasks.icons)
+        gulp.watch(['src/**/*.less'], tasks.less)
+        gulp.watch('src/icons/svg/*.svg', tasks.icons)
     },
 
     icons(cb) {
@@ -100,7 +100,7 @@ let tasks = {
                    '    <h1 style="font-family: arial; padding-left: 15px;">icon-font $count</h1>'
         let json = []
 
-        return gulp.src(['src/app/icons/svg/*.svg'])
+        return gulp.src(['src/icons/svg/*.svg'])
             .pipe(iconfont({
                 fontName: 'icon-font',
                 formats: ['woff'],
@@ -127,11 +127,11 @@ let tasks = {
 
                 html += '<div style="clear: both; height: 10px;"></div></body>\n</html>'
                 html = html.replace('$count', ' - ' + icons.length + ' icons')
-                fs.writeFileSync('src/app/icons/icon-font.css', css)
-                fs.writeFileSync('src/app/icons/preview.html', html)
-                fs.writeFileSync('src/app/icons/icons.json', JSON.stringify(json))
+                fs.writeFileSync('src/icons/icon-font.css', css)
+                fs.writeFileSync('src/icons/preview.html', html)
+                fs.writeFileSync('src/icons/icons.json', JSON.stringify(json))
             })
-            .pipe(gulp.dest('src/app/icons/'))
+            .pipe(gulp.dest('src/icons/'))
     }
 }
 

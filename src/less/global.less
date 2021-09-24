@@ -5,8 +5,13 @@
     font-style: normal;
 }
 
-* {
-    font-family: OpenSans,verdana;
+body {
+    overflow: hidden;
+    background-color: #FEFEFE;
+    * {
+        box-sizing: border-box;
+        font-family: opensans, verdana;
+    }
 }
 
 textarea {
@@ -25,7 +30,9 @@ input[readonly], textarea[readonly] {
     background-color: #f9f9f9 !important;
 }
 
-input[type=text][disabled], input[type=password][disabled], textarea[disabled] {
+input[type=text][disabled],
+input[type=password][disabled],
+textarea[disabled] {
     background-color: #eee;
 }
 

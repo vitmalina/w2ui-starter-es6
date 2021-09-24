@@ -1,13 +1,12 @@
-// *************************************************
-// ---- Document Structure
-//
+#app-toolbar {
+    background-color: transparent;
+    padding: 0px 10px;
+    margin: 16px 10px 0px 300px;
+}
 
-body {
-    overflow: hidden;
-    background-color: #FEFEFE;
-    * {
-        box-sizing: border-box;
-    }
+// hide sidevar show/hide
+.w2ui-sidebar .w2ui-sidebar-body .w2ui-node-group :nth-child(1) {
+    display: none;
 }
 
 #app-container {
@@ -29,28 +28,8 @@ body {
         left    : 0px;
         right   : 0px;
         height  : 60px;
-        box-shadow: 0px 0px 10px #dedede;
-        background-image: linear-gradient(#fff, #f5f5f5);
+        background-color: #fff;
         border-bottom: 1px solid #dedede;
-
-        // #app-icon {
-        //     display: inline-block;
-        //     position: absolute;
-        //     top: 10px;
-        //     left: 10px;
-        //     width: 40px;
-        //     height: 40px;
-        //     border: 1px solid silver;
-        //     border-radius: 3px
-        // }
-
-        // #app-title {
-        //     position: absolute;
-        //     top: 50px;
-        //     left: 80px;
-        //     color: #464646;
-        //     font-size: 22px;
-        // }
 
         #app-toolbar {
             float: right;
@@ -105,8 +84,4 @@ body {
         font-size: 11px;
         border-top: 1px solid white;
     }
-}
-
-.w2ui-layout > div .w2ui-panel .w2ui-panel-content {
-    background-color: #F6F6F6;
 }

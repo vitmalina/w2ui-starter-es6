@@ -1,0 +1,129 @@
+/* generated file, do not change */
+@font-face {
+  font-family: "OpenSans";
+  src: url("../libs/OpenSans/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  overflow: hidden;
+  background-color: #FEFEFE;
+}
+body * {
+  box-sizing: border-box;
+  font-family: opensans, verdana;
+}
+textarea {
+  line-height: 140% !important;
+  padding: 4px 6px;
+}
+input,
+select {
+  padding: 3px;
+  border-radius: 2px;
+  border: 1px solid #c7c7c7;
+}
+input[readonly],
+textarea[readonly] {
+  color: #777 !important;
+  background-color: #f9f9f9 !important;
+}
+input[type=text][disabled],
+input[type=password][disabled],
+textarea[disabled] {
+  background-color: #eee;
+}
+a {
+  color: #3379B8 !important;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.preview-msg {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 30%;
+  font-size: 16px;
+  color: #aaa;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fafafa;
+}
+#app-toolbar {
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 16px 10px 0px 300px;
+}
+.w2ui-sidebar .w2ui-sidebar-body .w2ui-node-group :nth-child(1) {
+  display: none;
+}
+#app-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: none;
+}
+#app-container .app-logo {
+  position: relative;
+  top: -3px;
+}
+#app-container #app-header {
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #dedede;
+}
+#app-container #app-header #app-toolbar {
+  z-index: 3;
+  display: inline-table;
+  float: right;
+  padding: 14px 5px 0px 20px;
+  background-color: transparent;
+}
+#app-container #app-header #app-title {
+  float: left;
+  display: inline-block;
+  padding: 15px 15px 0px 20px;
+  font-size: 20px;
+  color: #606060;
+  text-shadow: 0px 1px 2px #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#app-container #app-header #app-title .app-logo {
+  border: 1px solid silver;
+  border-radius: 3px;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  left: 15px;
+  top: 11px;
+}
+#app-container #app-header #app-title .app-caption {
+  margin-top: 4px;
+  margin-left: 45px;
+}
+#app-container #app-header #app-title .icon-chevron-right {
+  font-size: 15px;
+  position: relative;
+  top: -1px;
+  color: #8a8a8a;
+}
+#app-container #app-main {
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  font-size: 11px;
+  border-top: 1px solid white;
+}
