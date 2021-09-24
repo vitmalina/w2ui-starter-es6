@@ -8,7 +8,7 @@ export default {
         style: '',
         panels: [
             { type: 'top', size: '20px', overflow: 'hidden', hidden: true },
-            { type: 'left', size: '160px', minSize: 100, resizable: true, style: 'border-right: 1px solid #ddd' },
+            { type: 'left', size: '180px', minSize: 100, resizable: true, style: 'border-right: 1px solid #ddd' },
             { type: 'main', overflow: 'hidden', style: 'background-color: white;' },
             { type: 'right', size: '400px', resizable: true, hidden: true, style: 'border-left: 1px solid #ddd' },
             { type: 'preview', size: '200px', overflow: 'hidden', hidden: true, resizable: true },
@@ -20,9 +20,8 @@ export default {
     app_tb: {
         name  : 'app_tb',
         items : [
-            { id: 'home', text: 'Home', type: 'radio', icon: 'icon-home', route: '/home' },
-            { id: 'project', text: 'Projects', type: 'radio', icon: 'icon-flag', route: '/projects' },
-            { id: 'helpdesk', text: 'HelpDesk', type: 'radio', icon: 'icon-bug', route: '/helpdesk' },
+            { id: 'home', text: 'Home', type: 'radio', group: 'main', icon: 'icon-home', route: '/home' },
+            { id: 'project', text: 'My Projects', type: 'radio', group: 'main', icon: 'icon-flag', route: '/projects' },
             { id: 'spacer1', type: 'spacer' },
             { id: 'user', text: 'User Name', type: 'menu',
                 items: [
@@ -42,7 +41,7 @@ export default {
             { id: 'general', text: 'General', icon: '', group: true, expanded: true,
                 nodes: [
                     { id: 'home', text: 'Home', icon: 'icon-home', route: '/home' },
-                    { id: 'projects', text: 'My Projects', icon: 'icon-bug', route: '/home/projects' },
+                    { id: 'projects', text: 'My Projects', icon: 'icon-flag', route: '/home/projects' },
                 ],
             }
         ],
@@ -52,7 +51,7 @@ export default {
                 w2ui.app_layout.set('left', { size: 35, minSize: 35, resizable: false })
                 app.main.prefs.set('ui-sidebar-size', 'small')
             } else {
-                w2ui.app_layout.set('left', { size: 160, minSize: 100, resizable: true })
+                w2ui.app_layout.set('left', { size: 180, minSize: 100, resizable: true })
                 app.main.prefs.set('ui-sidebar-size', 'large')
             }
         },
