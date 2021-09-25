@@ -188,32 +188,35 @@ class Router extends w2event {
                             attr.value = 'use-credentials' // makes Safari 13 pass cookies
                             child.setAttributeNode(attr)
                             child.onload = (event) => { router.go(router.get()) }
-                            document.head.appendChild(child)
+                            child.onerror = (event) => {
+                                let edata = router.trigger({ phase: 'before', type: 'error', target: 'self', hash: hash,
+                                    originalEvent: event, 404: true })
+                                if (edata.isCancelled === true) return false
+                                // if events are available
+                                router.trigger(Object.assign(edata, { phase: 'after' }))
+                            }
                             if (router.verbose) console.log(`ROUTER: Auto Load Module "${mod.path}" for path "${mod.route}"`)
+                            document.head.appendChild(child)
                         }
                         return
                     }
                 }
             })
         }
-        if (!isAutoLoad && !isExact) {
-            let edata
-            if (!isAutoLoad) {
-                edata = router.trigger({ phase: 'before', type: 'error', target: 'self', hash: hash})
-                if (edata.isCancelled === true) return false
-            }
-            // default behaviour
-            if (router.verbose) {
+        if (!isAutoLoad && !isFound) {
+            let edata = router.trigger({ phase: 'before', type: 'error', target: 'self', hash: hash })
+            if (edata.isCancelled === true) return false
+            // if events are available
+            router.trigger(Object.assign(edata, { phase: 'after' }))
+        }
+        if (!isAutoLoad && router.verbose) {
+            // path not found
+            if (!isExact) {
                 console.log(`ROUTER: Exact route for "${hash}" not found`)
             }
-            // if events are available
-            if (!isAutoLoad) {
-                router.trigger(Object.assign(edata, { phase: 'after' }))
+            if (!isFound) {
+                console.log(`ROUTER: Wild card route for "${hash}" not found`)
             }
-        }
-        if (!isFound && !isAutoLoad && router.verbose) {
-            // path not found
-            console.log(`ROUTER: Wild card route for "${hash}" not found`)
         }
     }
 
