@@ -16,15 +16,18 @@ Your app should live in `/src` folder. This is where all front-end code is. You 
 
 ```
 /app            - all front-end code is here
-  /less         - global less files
-  /icons        - svg files for icons and generated icon font
   /main         - layout and main menus
-    global.css  - global css
-    global.less - global less
-    router.js   - tiny router, see description below
-    routers.js  - for auto loading modules
-    start.js    - starting point <--- START HERE
+    conf.js     - main module config files
+    main.js     - main module start point
+    prefs.js    - main.prefs - to save preferences to local storage
+  router.js     - tiny router, see description below
+  routers.js    - for auto loading modules
+  start.js      - starting point <--- START HERE
+/less           - global less files
+/icons          - svg files for icons and generated icon font
 /libs           - 3d prath libs
+global.css      - global css
+global.less     - global less
 index.html      - basic html
 ```
 
