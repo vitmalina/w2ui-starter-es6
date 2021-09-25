@@ -196,17 +196,24 @@ class Router extends w2event {
                 }
             })
         }
-        if (!isAutoLoad && !isExact && router.verbose) console.log(`ROUTER: Exact route for "${hash}" not found`)
-        let edata
-        if (!isFound) {
-            // path not found
-            if (typeof router.trigger == 'function') {
+        if (!isAutoLoad && !isExact) {
+            let edata
+            if (!isAutoLoad) {
                 edata = router.trigger({ phase: 'before', type: 'error', target: 'self', hash: hash})
                 if (edata.isCancelled === true) return false
             }
-            if (!isAutoLoad && router.verbose) console.log(`ROUTER: Wild card route for "${hash}" not found`)
+            // default behaviour
+            if (router.verbose) {
+                console.log(`ROUTER: Exact route for "${hash}" not found`)
+            }
             // if events are available
-            if (typeof router.trigger == 'function') router.trigger(Object.assign(edata, { phase: 'after' }))
+            if (!isAutoLoad) {
+                router.trigger(Object.assign(edata, { phase: 'after' }))
+            }
+        }
+        if (!isFound && !isAutoLoad && router.verbose) {
+            // path not found
+            console.log(`ROUTER: Wild card route for "${hash}" not found`)
         }
     }
 
