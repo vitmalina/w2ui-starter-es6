@@ -1,4 +1,4 @@
-/* w2ui 2.0.x (nightly) (9/24/2021, 2:16:03 PM) (c) http://w2ui.com, vitmalina@gmail.com */
+/* w2ui 2.0.x (nightly) (9/25/2021, 7:39:02 AM) (c) http://w2ui.com, vitmalina@gmail.com */
 /************************************************************************
 *   Part of w2ui 2.0 library
 *   - Dependencies: jQuery, w2utils
@@ -1563,7 +1563,7 @@ let w2utils = (($) => {
             }
         })
     }
-    function scrollBarSize () {
+    function scrollBarSize() {
         if (tmp.scrollBarSize) return tmp.scrollBarSize
         let html =
             '<div id="_scrollbar_width" style="position: absolute; top: -300px; width: 100px; height: 100px; overflow-y: scroll;">'+
@@ -1914,7 +1914,7 @@ let w2utils = (($) => {
                     })
                 }
                 let method = params[0]
-                params.shift()
+                params = params.slice(1) // should be new array
                 $(el)
                     .off(name + '.w2utils-bind')
                     .on(name + '.w2utils-bind', function(event) {
@@ -2042,10 +2042,11 @@ w2utils.formatters = {
         return ret
     }
 }
+// register globals
 if (self) {
+    w2ui = self.w2ui || {}
+    self.w2ui = w2ui
     self.w2utils = w2utils
-    self.w2ui    = self.w2ui || {}
-    w2ui         = self.w2ui
 }
 /************************************************************************
 *   Part of w2ui 2.0 library
@@ -12018,7 +12019,6 @@ class w2dialog extends w2event {
                     }
                     // event after
                     obj.trigger($.extend(edata, { phase: 'after' }))
-                    w2utils.bindEvents('#w2ui-popup .w2ui-popup-action', w2popup)
                     resolve(edata)
                 }, 150)
             } else {
@@ -12075,7 +12075,7 @@ class w2dialog extends w2event {
                         }
                         // event after
                         obj.trigger($.extend(edata, { phase: 'after' }))
-                        w2utils.bindEvents('#w2ui-popup .w2ui-popup-action', w2popup)
+                        w2utils.bindEvents(`#w2ui-popup #w2ui-message${msgCount} .w2ui-popup-action`, w2popup)
                         resolve(edata)
                     }, 350)
                 }
@@ -12274,10 +12274,6 @@ class w2dialog extends w2event {
             }
         }
     }
-}
-let w2popup = new w2dialog()
-if (window) {
-    window.w2popup = w2popup
 }
 function w2alert(msg, title, callBack) {
     let $ = jQuery
@@ -12695,6 +12691,14 @@ function w2prompt(label, title, callBack) {
             return this
         }
     }
+}
+// register globals
+let w2popup = new w2dialog()
+if (self) {
+    self.w2popup = w2popup
+    self.w2alert = w2alert
+    self.w2confirm = w2confirm
+    self.w2prompt = w2prompt
 }
 /************************************************************************
 *   Part of w2ui 2.0 library
@@ -16095,7 +16099,7 @@ class w2field extends w2event {
         $(obj.el).removeClass('has-focus')
         // hide overlay
         if (['color', 'date', 'time', 'list', 'combo', 'enum', 'datetime'].indexOf(obj.type) !== -1) {
-            let closeTimeout = window.setTimeout(() => {
+            let closeTimeout = setTimeout(() => {
                 if ($overlay.data('keepOpen') !== true) $overlay.hide()
             }, 0)
             $('.menu', $overlay).one('focus', function() {
@@ -17916,6 +17920,7 @@ class w2field extends w2event {
 *   - two way data bindings
 *   - rename applyFocus -> focus
 *   - tabs below some fields (could already be implemented)
+*   - form with toolbar & tabs
 *
 * == 2.0 changes
 *   - show/hide, enable/disable - return array of effected items
@@ -19930,6 +19935,8 @@ class w2form extends w2event {
     $.fn.w2popup = function(options) {
         if (this.length > 0 ) {
             w2popup.template(this[0], null, options)
+        } else if (options.url) {
+            w2popup.load(options)
         }
     }
     $.fn.w2marker = function() {
