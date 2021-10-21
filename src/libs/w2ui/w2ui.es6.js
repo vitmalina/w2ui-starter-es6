@@ -13324,6 +13324,7 @@ class w2toolbar extends w2event {
             html: '',
             tooltip: null, // w2toolbar.tooltip should be
             count: null,
+            title: null,
             hidden: false,
             disabled: false,
             checked: false, // used for radio buttons
@@ -13921,6 +13922,7 @@ class w2toolbar extends w2event {
                 html = `
                     <div id="tb_${this.name}_item_${item.id}" style="${(item.hidden ? 'display: none' : '')}"
                         class="w2ui-tb-button${item.checked ? ' checked' : ''}${(item.class ? ' '+item.class : '')}${(item.disabled ? ' disabled' : '')}${(!icon ? ' no-icon' : '')}"
+                        title="${item.title || ''}"
                         ${!item.disabled
                             ? `data-click='["click","${item.id}"]'
                                data-mouseenter='["mouseAction", "event", "this", "enter", "${item.id}"]'
