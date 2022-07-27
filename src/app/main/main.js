@@ -1,6 +1,6 @@
 import conf from './conf.js'
 import prefs from './prefs.js'
-import { w2toolbar, w2layout, w2sidebar, w2grid, w2alert } from '../../libs/w2ui/w2ui.es6.min.js'
+import { query, w2ui, w2toolbar, w2layout, w2sidebar, w2grid, w2alert } from '../../libs/w2ui/w2ui.es6.min.js'
 
 let app_layout = new w2layout(conf.app_layout)
 let app_tb = new w2toolbar(conf.app_tb)
@@ -8,9 +8,9 @@ let main_sb = new w2sidebar(conf.main_sb)
 let main_grid = new w2grid(conf.main_grid)
 
 // display
-$('#app-toolbar').w2render(app_tb)
-$('#app-main').w2render(app_layout)
-$('#app-container').fadeIn(50)
+app_tb.render(query('#app-toolbar')[0])
+app_layout.render(query('#app-main')[0])
+query('#app-container').show()
 
 app.router.add({
 

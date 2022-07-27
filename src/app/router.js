@@ -1,7 +1,7 @@
 import modules from './routes.js'
-import { w2event } from '../libs/w2ui/w2ui.es6.min.js'
+import { w2base } from '../libs/w2ui/w2ui.es6.min.js'
 
-class Router extends w2event {
+class Router extends w2base {
     constructor() {
         super()
         this.routes = {}
@@ -39,13 +39,13 @@ class Router extends w2event {
         route = String('/'+route).replace(/\/{2,}/g, '/')
         // if events are available
         if (typeof router.trigger == 'function') {
-            edata = router.trigger({ phase: 'before', type: 'add', target: 'self', route: route, handler: handler })
+            edata = router.trigger('add', { target: 'self', route: route, handler: handler })
             if (edata.isCancelled === true) return false
         }
         // default behavior
         this.routes[route] = handler
         // if events are available
-        if (typeof router.trigger == 'function') router.trigger(Object.assign(edata, { phase: 'after' }))
+        if (typeof router.trigger == 'function') edata.finish()
         return router
     }
 
@@ -54,14 +54,14 @@ class Router extends w2event {
         route = String('/'+route).replace(/\/{2,}/g, '/')
         // if events are available
         if (typeof router.trigger == 'function') {
-            edata = router.trigger({ phase: 'before', type: 'remove', target: 'self', route: route })
+            edata = router.trigger('remove', { target: 'self', route: route })
             if (edata.isCancelled === true) return false
         }
         // default behavior
         delete this.routes[route]
         delete this.routeRE[route]
         // if events are available
-        if (typeof router.trigger == 'function') router.trigger(Object.assign(edata, { phase: 'after' }))
+        if (typeof router.trigger == 'function') edata.finish()
         return router
     }
 
@@ -143,7 +143,7 @@ class Router extends w2event {
                 }
                 // if events are available
                 if (typeof router.trigger == 'function') {
-                    edata = router.trigger({ phase: 'before', type: 'route', target: 'self', route: r, params: params })
+                    edata = router.trigger('route', { target: 'self', route: r, params: params })
                     if (edata.isCancelled === true) return false
                 }
                 // default handler
@@ -151,7 +151,7 @@ class Router extends w2event {
                     this.routes[r]({ name: r, path: hash, params: params }, params)
                 }
                 // if events are available
-                if (typeof router.trigger == 'function') router.trigger(Object.assign(edata, { phase: 'after' }))
+                if (typeof router.trigger == 'function') edata.finish()
                 // if hash changed (for example in handler), then do not process rest of old processings
                 let current = window.location.hash.substr(1).replace(/\/{2,}/g, '/')
                 if (hash !== current) return
@@ -189,11 +189,10 @@ class Router extends w2event {
                             child.setAttributeNode(attr)
                             child.onload = (event) => { router.go(router.get()) }
                             child.onerror = (event) => {
-                                let edata = router.trigger({ phase: 'before', type: 'error', target: 'self', hash: hash,
-                                    originalEvent: event, 404: true })
+                                let edata = router.trigger('error', { target: 'self', hash: hash, originalEvent: event, 404: true })
                                 if (edata.isCancelled === true) return false
                                 // if events are available
-                                router.trigger(Object.assign(edata, { phase: 'after' }))
+                                edata.finish()
                             }
                             if (router.verbose) console.log(`ROUTER: Auto Load Module "${mod.path}" for path "${mod.route}"`)
                             document.head.appendChild(child)
@@ -204,10 +203,10 @@ class Router extends w2event {
             })
         }
         if (!isAutoLoad && !isFound) {
-            let edata = router.trigger({ phase: 'before', type: 'error', target: 'self', hash: hash })
+            let edata = router.trigger('error', { target: 'self', hash: hash })
             if (edata.isCancelled === true) return false
             // if events are available
-            router.trigger(Object.assign(edata, { phase: 'after' }))
+            edata.finish()
         }
         if (!isAutoLoad && router.verbose) {
             // path not found

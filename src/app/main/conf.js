@@ -47,7 +47,7 @@ export default {
         ],
         flatButton: true,
         onFlat: function (event) {
-            if (event.goFlat == true) {
+            if (event.detail.goFlat == true) {
                 w2ui.app_layout.set('left', { size: 35, minSize: 35, resizable: false })
                 app.main.prefs.set('ui-sidebar-size', 'small')
             } else {
