@@ -1,6 +1,6 @@
 import conf from './conf.js'
 import prefs from './prefs.js'
-import { query, w2ui, w2toolbar, w2layout, w2sidebar, w2grid, w2alert } from '../../libs/w2ui/w2ui.es6.min.js'
+import { query, w2ui, w2toolbar, w2layout, w2sidebar, w2grid } from '../../libs/w2ui/w2ui.es6.min.js'
 
 let app_layout = new w2layout(conf.app_layout)
 let app_tb = new w2toolbar(conf.app_tb)
