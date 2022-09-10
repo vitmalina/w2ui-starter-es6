@@ -2,7 +2,7 @@
 
 This repo is small, modular, easily extensible starting point to build apps with `w2ui` and `ES6 Modules`. Only modern browsers (ever-green: [latest, chrome, edge, firefox] and Safari 13+) support ES6 modules natively.
 
-The purpose of this repo is to  provide structure. It is a front-end framework, only few basic node based API files included.  I have included latest jQuery and w2ui in the `src/libs` folder.
+The purpose of this repo is to  provide structure. It is a front-end framework, only few basic node based API files included.  I have included latest version of w2ui in the `src/libs` folder. There is no other dependencies.
 
 To get going:
 ```
