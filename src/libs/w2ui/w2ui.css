@@ -1,4 +1,4 @@
-/* w2ui 2.0.x (nightly) (9/10/2022, 11:11:37 AM) (c) http://w2ui.com, vitmalina@gmail.com */
+/* w2ui 2.0.x (nightly) (12/24/2022, 8:38:11 AM) (c) http://w2ui.com, vitmalina@gmail.com */
 /**
 * TODO:
 *  - remove default styling, only keep w2ui-* styles
@@ -412,6 +412,65 @@ input[type="checkbox"].w2ui-toggle.green:checked + div > div {
   background: #F7F7F7 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAz0lEQVR4Ae2UG7TGMBCEr1vd4la3uMUtuli3utWtbnGLW9zi9l/bDMzJG7u12cfJfLunf1+UEC9Bv0vVQwJ8hjRCaZafflb1C9RQf4OD0gSDE+i+PiJAabFhQc1y1AYYsJGLY3lgxM17uWPO56yPiFDqVPWgRtpIHSd1zPnwkBsdI58OlNwx4fP2X0TgfMTOoHSdKOXkpyNvEyQh7ul+4swxJSTQuwNDxz68l/ukVNbu0Neen5Z+KvzWxBAqHds349uPFJ/jVOrPjxUq++OLf+20q5+noXo0AAAAAElFTkSuQmCC') center center no-repeat;
   background-size: 15px 13px;
 }
+/*************************************
+* ---- Notification message ----
+*/
+#w2ui-notify {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  right: 0px;
+  bottom: 15px;
+  z-index: 10000;
+  overflow: hidden;
+}
+#w2ui-notify > div {
+  position: relative;
+  background-color: #292828ba;
+  color: #ffffff;
+  padding: 8px 44px 8px 16px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 10px #9c9c9c;
+  max-height: 76px;
+  min-width: 100px;
+  max-width: 800px;
+  font-size: 16px;
+  text-shadow: 1px 0 0 black;
+}
+#w2ui-notify > div a {
+  color: #6cd0e8;
+  text-decoration: none;
+  cursor: pointer;
+}
+#w2ui-notify > div a:hover {
+  color: #a2f0ff;
+}
+#w2ui-notify > div span.w2ui-notify-close {
+  padding: 6px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+  color: #c3c3c3;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+#w2ui-notify > div span.w2ui-notify-close:hover {
+  background-color: #807e7e;
+  color: #ffffff;
+}
+#w2ui-notify > div.w2ui-notify-error {
+  text-shadow: none;
+  background-color: rgba(255, 0, 0, 0.8);
+}
+#w2ui-notify > div.w2ui-notify-error .w2ui-notify-close {
+  color: #ffffff;
+}
+#w2ui-notify > div.w2ui-notify-error .w2ui-notify-close:hover {
+  background-color: #fcadad;
+  color: rgba(255, 0, 0, 0.8);
+}
 input[type=button].w2ui-btn,
 button.w2ui-btn {
   position: relative;
@@ -685,7 +744,7 @@ button.w2ui-btn:disabled {
 .w2ui-overlay .w2ui-overlay-body.w2ui-arrow-bottom:after {
   content: "";
   position: absolute;
-  top: calc(var(--tip-size, 8px) * -0.5 - 1px);
+  top: calc(var(--tip-size, 8px) * -0.5);
   left: 50%;
   transform: rotate(45deg) translateX(-50%);
   transform-origin: center left;
@@ -1349,9 +1408,13 @@ button.w2ui-btn:disabled {
   padding: 0px;
   overflow: hidden;
 }
-.w2ui-form > div {
+.w2ui-form > .w2ui-form-box {
   position: absolute;
   overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .w2ui-form .w2ui-form-header {
   position: absolute;
@@ -1902,32 +1965,16 @@ textarea.w2ui-error {
 * ---- Layout ----
 */
 .w2ui-layout {
+  position: relative;
   overflow: hidden;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.w2ui-layout * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .w2ui-layout > div {
   position: absolute;
   overflow: hidden;
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
-  outline: 0px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 .w2ui-layout > div .w2ui-panel {
   display: none;
@@ -2000,9 +2047,13 @@ textarea.w2ui-error {
   border-radius: 2px;
   overflow: hidden !important;
 }
-.w2ui-grid > div {
+.w2ui-grid > .w2ui-grid-box {
   position: absolute;
   overflow: hidden;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 .w2ui-grid .w2ui-grid-header {
   position: absolute;
@@ -2373,9 +2424,6 @@ textarea.w2ui-error {
   overflow: hidden;
   position: relative;
 }
-.w2ui-grid .w2ui-grid-body table .w2ui-head.w2ui-reorder-cols-head:hover {
-  cursor: move;
-}
 .w2ui-grid .w2ui-grid-body table td {
   border-right: 1px solid #f1f1f1;
   border-bottom: 0px solid #D6D5D7;
@@ -2462,7 +2510,7 @@ textarea.w2ui-error {
   overflow: hidden;
 }
 .w2ui-grid .w2ui-grid-body table .w2ui-col-select div input[type=checkbox] {
-  margin-top: 0px;
+  margin-top: 3px;
   margin-bottom: 0px;
   position: relative;
 }
@@ -2964,6 +3012,31 @@ textarea.w2ui-error {
   opacity: 0;
   transform: scale(0.9);
 }
+.w2ui-popup .w2ui-popup-title-btns {
+  float: right;
+  margin: 10px 10px 0 0;
+  font-size: 17px;
+}
+.w2ui-popup .w2ui-popup-title-btns .w2ui-popup-button {
+  float: right;
+  width: 25px;
+  height: 23px;
+  cursor: pointer;
+  color: #888;
+  margin: 0 0 0 2px;
+  z-index: 301;
+  position: relative;
+}
+.w2ui-popup .w2ui-popup-title-btns .w2ui-popup-button span.w2ui-icon {
+  width: 24px;
+  height: 23px;
+}
+.w2ui-popup .w2ui-popup-title-btns .w2ui-popup-button.w2ui-popup-close:hover {
+  color: #222;
+}
+.w2ui-popup .w2ui-popup-title-btns .w2ui-popup-button.w2ui-popup-max:hover {
+  color: #222;
+}
 .w2ui-popup .w2ui-popup-title {
   padding: 10px;
   border-radius: 6px 6px 0px 0px;
@@ -2985,24 +3058,6 @@ textarea.w2ui-error {
   font-size: 17px;
   color: #555;
   z-index: 300;
-}
-.w2ui-popup .w2ui-popup-button {
-  float: right;
-  width: 25px;
-  height: 23px;
-  cursor: pointer;
-  color: #888;
-  margin: 0 0 0 5px;
-}
-.w2ui-popup .w2ui-popup-button span.w2ui-icon {
-  width: 24px;
-  height: 23px;
-}
-.w2ui-popup .w2ui-popup-button.w2ui-popup-close:hover {
-  color: #222;
-}
-.w2ui-popup .w2ui-popup-button.w2ui-popup-max:hover {
-  color: #222;
 }
 .w2ui-popup .w2ui-box,
 .w2ui-popup .w2ui-box-temp {
