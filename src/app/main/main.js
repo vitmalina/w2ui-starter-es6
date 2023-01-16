@@ -4,12 +4,12 @@ import { query, w2ui, w2toolbar, w2layout, w2sidebar, w2grid } from '../../libs/
 
 let app_layout = new w2layout(conf.app_layout)
 let app_tb = new w2toolbar(conf.app_tb)
-let main_sb = new w2sidebar(conf.main_sb)
+let main_sb = new w2sidebar(Object.assign(conf.main_sb, conf.sb_proto))
 let main_grid = new w2grid(conf.main_grid)
 
 // display
-app_tb.render(query('#app-toolbar')[0])
-app_layout.render(query('#app-main')[0])
+app_tb.render('#app-toolbar')
+app_layout.render('#app-main')
 query('#app-container').show()
 
 app.router.add({
@@ -25,8 +25,8 @@ app.router.add({
         w2ui.app_layout.html('main', main_grid)
     },
 
-    '/home/projects'(event) {
-        w2ui.main_sb.select('projects')
+    '/home/other'(event) {
+        w2ui.main_sb.select('other')
         w2ui.app_layout.html('main', `
             <div class="w2ui-centered" style="font-size: 16px; color: gray">
                 You can refresh this page, it will still come to this sidebar item
