@@ -23,7 +23,7 @@ Your app should live in `/src` folder. This is where all front-end code is. You 
     main.js     - main module start point
     prefs.js    - main.prefs - to save preferences to local storage
   router.js     - tiny router, see description below
-  routers.js    - for auto loading modules
+  routes.js     - for auto loading modules
   start.js      - starting point <--- START HERE
 /less           - global less files
 /icons          - svg files for icons and generated icon font
