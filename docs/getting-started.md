@@ -1,6 +1,6 @@
 # Getting Started
 
-Starting point is `src/app/index.html. The index file is minimal and provides generic structure for the applications layout, includes all necessary JS libraries and global css files.
+Starting point is `src/app/index.html`. The index file is minimal and provides generic structure for the applications layout, includes all necessary JS libraries and global css files.
 
 All application logic start with `src/app/start.js`, which is loaded as ES6 module. You can see annotated version of that file below.
 
