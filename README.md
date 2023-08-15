@@ -44,5 +44,5 @@ gulp build     # bundles project into /build folder
 
 See more:
 - [Getting Started](docs/getting-started.md)
-- [ES6 Modules](es6-modules.md)
-- [Router](router.md)
+- [ES6 Modules](docs/es6-modules.md)
+- [Router](docs/router.md)
