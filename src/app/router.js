@@ -8,7 +8,7 @@ class Router extends w2base {
         this.routeRE = {}
         this.verbose = true
         this.onAdd = null
-        this.onRemvoe = null
+        this.onRemove = null
         this.onRoute = null
         // add listeners
         if (window.addEventListener) {
