@@ -1,9 +1,18 @@
 {
 	"records": [
-		{ "projectis": 1, "project_name": "Project 1", "start_date": "1/1/2023" },
-		{ "projectis": 2, "project_name": "Project 2" },
-		{ "projectis": 3, "project_name": "Project 2" }
+		{ "recid": 1,  "project_name": "Customer portal redesign",  "status": "Active",   "owner": "Morgan Lee",    "team": "Product",     "start_date": "2025-10-12", "target_date": "2026-06-30", "progress": 62, "priority": "High",   "budget": "$320K" },
+		{ "recid": 2,  "project_name": "Ledger API v2",            "status": "Active",   "owner": "Alex Kim",      "team": "Engineering", "start_date": "2025-11-01", "target_date": "2026-05-15", "progress": 48, "priority": "High",   "budget": "$180K" },
+		{ "recid": 3,  "project_name": "Data warehouse lift",     "status": "Active",   "owner": "Priya Shah",    "team": "Data",        "start_date": "2025-08-20", "target_date": "2026-09-01", "progress": 35, "priority": "Medium", "budget": "$410K" },
+		{ "recid": 4,  "project_name": "Mobile SSO rollout",         "status": "On hold",  "owner": "Jordan Hayes",  "team": "Security",    "start_date": "2025-09-05", "target_date": "2026-04-20", "progress": 22, "priority": "Medium", "budget": "$95K" },
+		{ "recid": 5,  "project_name": "Partner webhook platform",  "status": "Active",   "owner": "Sam Rivera",    "team": "Integrations","start_date": "2026-01-15", "target_date": "2026-08-10", "progress": 18, "priority": "High",   "budget": "$220K" },
+		{ "recid": 6,  "project_name": "Nordic checkout i18n",      "status": "Planning", "owner": "Elin Andersson","team": "Marketing",  "start_date": "2026-03-01", "target_date": "2026-11-15", "progress": 5,  "priority": "Low",    "budget": "$64K" },
+		{ "recid": 7,  "project_name": "Ops automation suite",     "status": "Active",   "owner": "Oliver Harris", "team": "Operations",  "start_date": "2025-12-10", "target_date": "2026-07-30", "progress": 55, "priority": "Medium", "budget": "$150K" },
+		{ "recid": 8,  "project_name": "FP&A reporting hub",         "status": "Active",   "owner": "Rachel Lee",    "team": "Finance",     "start_date": "2025-07-22", "target_date": "2026-02-28", "progress": 78, "priority": "Medium", "budget": "$88K" },
+		{ "recid": 9,  "project_name": "Support Mac refresh",        "status": "Complete", "owner": "Chris Jones",  "team": "IT",          "start_date": "2025-01-10", "target_date": "2026-02-15", "progress": 100, "priority": "Low",    "budget": "$42K" },
+		{ "recid": 10, "project_name": "Brand refresh 2026",         "status": "Planning", "owner": "Ava King",     "team": "Marketing",  "start_date": "2026-04-01", "target_date": "2026-12-01", "progress": 0,  "priority": "High",   "budget": "$200K" },
+		{ "recid": 11, "project_name": "Inventory sync to ERP",     "status": "Active",   "owner": "Nina Young",   "team": "Engineering",  "start_date": "2026-02-18", "target_date": "2026-10-01", "progress": 12, "priority": "High",   "budget": "$175K" },
+		{ "recid": 12, "project_name": "Q1 security audit",         "status": "Active",   "owner": "Jordan Hayes",  "team": "Security",   "start_date": "2026-01-05", "target_date": "2026-03-31", "progress": 40, "priority": "High",   "budget": "$55K" }
 	],
 	"status": "success",
-	"total": 3
+	"total": 12
 }

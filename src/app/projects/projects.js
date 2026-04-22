@@ -1,5 +1,6 @@
 import conf from './conf.js'
 import main_conf from '../main/conf.js'
+import projectSummary from './project-summary.js'
 import { w2ui, w2grid, w2sidebar } from '../../libs/w2ui/w2ui.es6.min.js'
 import '../main/main.js'
 
@@ -20,6 +21,7 @@ function showPlaceholder(nodeId, title, message) {
 app.router.add({
     '/projects*'(event) {
         w2ui.app_layout.html('left', project_sb)
+        w2ui.app_layout.hide('right', true)
         w2ui.app_tb.uncheck(...w2ui.app_tb.get())
         w2ui.app_tb.check('projects')
     },
@@ -34,7 +36,17 @@ app.router.add({
     },
 
     '/projects/overview'(event) {
-        showPlaceholder('pg-overview', 'Projects overview', 'See a high-level snapshot of your portfolio, health, and upcoming dates here. Connect this view to a real API when you are ready.')
+        w2ui.project_sb.select('pg-overview')
+        let promise = w2ui.app_layout.html('main',
+            '<div id="projects-summary-host" class="projects-summary-host" ' +
+            'style="width:100%;height:100%;overflow:auto;"></div>')
+        if (promise && typeof promise.removed == 'function') {
+            promise.removed(() => projectSummary.destroy())
+        }
+        requestAnimationFrame(() => {
+            let host = document.getElementById('projects-summary-host')
+            if (host) projectSummary.render(host)
+        })
     },
 
     '/projects/list'(event) {

@@ -75,9 +75,9 @@ function barChartOptions() {
             ...baseFont(),
             redrawOnParentResize: true,
             redrawOnWindowResize: true,
-            animations: { enabled: true, easing: 'easeinout', speed: 650,
-                animateGradually: { enabled: true, delay: 120 },
-                dynamicAnimation: { enabled: true, speed: 250 } }
+            animations: { enabled: true, easing: 'easeinout', speed: 160,
+                animateGradually: { enabled: true, delay: 30 },
+                dynamicAnimation: { enabled: true, speed: 65 } }
         },
         series: [
             { name: 'Revenue', data: revenueSeries.revenue },
@@ -139,9 +139,9 @@ function radialChartOptions() {
             ...baseFont(),
             redrawOnParentResize: true,
             redrawOnWindowResize: true,
-            animations: { enabled: true, speed: 800,
-                animateGradually: { enabled: true, delay: 150 },
-                dynamicAnimation: { enabled: true, speed: 250 } }
+            animations: { enabled: true, speed: 200,
+                animateGradually: { enabled: true, delay: 36 },
+                dynamicAnimation: { enabled: true, speed: 65 } }
         },
         series: performance.map(p => p.value),
         labels: performance.map(p => p.label),
@@ -191,9 +191,9 @@ function trafficChartOptions() {
             ...baseFont(),
             redrawOnParentResize: true,
             redrawOnWindowResize: true,
-            animations: { enabled: true, easing: 'easeinout', speed: 650,
-                animateGradually: { enabled: true, delay: 120 },
-                dynamicAnimation: { enabled: true, speed: 250 } }
+            animations: { enabled: true, easing: 'easeinout', speed: 160,
+                animateGradually: { enabled: true, delay: 30 },
+                dynamicAnimation: { enabled: true, speed: 65 } }
         },
         series: trafficSeries,
         colors: [palette.primary, palette.accent],
@@ -230,9 +230,9 @@ function donutChartOptions() {
     return {
         chart: { type: 'donut', height: 300, ...baseFont(),
             redrawOnParentResize: true, redrawOnWindowResize: true,
-            animations: { enabled: true, speed: 650,
-                animateGradually: { enabled: true, delay: 150 },
-                dynamicAnimation: { enabled: true, speed: 250 } } },
+            animations: { enabled: true, speed: 160,
+                animateGradually: { enabled: true, delay: 36 },
+                dynamicAnimation: { enabled: true, speed: 65 } } },
         series: channels.values,
         labels: channels.labels,
         colors: [palette.primary, palette.accent, palette.warning, palette.success, palette.info],
@@ -267,7 +267,7 @@ function donutChartOptions() {
 
 let charts = []
 let resizeObserver = null
-let resizeTimer = null
+let resizeRaf = null
 let resizeEnableTimer = null
 let hostRef = null
 let lastWidth = 0
@@ -403,7 +403,7 @@ function destroy() {
         try { resizeObserver.disconnect() } catch (e) { /* noop */ }
         resizeObserver = null
     }
-    if (resizeTimer)       { clearTimeout(resizeTimer);       resizeTimer = null }
+    if (resizeRaf)         { cancelAnimationFrame(resizeRaf); resizeRaf = null }
     if (resizeEnableTimer) { clearTimeout(resizeEnableTimer); resizeEnableTimer = null }
     charts.forEach(c => { try { c.destroy() } catch (e) { /* noop */ } })
     charts = []
@@ -411,25 +411,19 @@ function destroy() {
     lastWidth = 0
 }
 
-function triggerResize(entries) {
-    // Ignore if the width didn't actually change (ResizeObserver fires a synthetic
-    // initial callback on observe() which would otherwise abort the intro animation).
-    const w = entries && entries[0] && entries[0].contentRect
-        ? Math.round(entries[0].contentRect.width)
-        : (hostRef ? hostRef.clientWidth : 0)
-    if (w === lastWidth) return
-    lastWidth = w
-
-    if (resizeTimer) clearTimeout(resizeTimer)
-    resizeTimer = setTimeout(() => {
-        resizeTimer = null
+function triggerResize() {
+    if (resizeRaf) cancelAnimationFrame(resizeRaf)
+    resizeRaf = requestAnimationFrame(() => {
+        resizeRaf = null
+        const w = hostRef ? hostRef.clientWidth : 0
+        if (w === lastWidth) return
+        lastWidth = w
         charts.forEach(c => {
             try {
-                // redrawPaths=false, animate=false → fast, no intro anim replay
                 c.updateOptions({}, false, false, false)
             } catch (e) { /* noop */ }
         })
-    }, 40)
+    })
 }
 
 function render(hostEl) {
@@ -460,7 +454,7 @@ function render(hostEl) {
             resizeObserver = new ResizeObserver(triggerResize)
             resizeObserver.observe(hostEl)
         }
-    }, 1100) // slightly longer than the slowest chart's intro (radial ~800ms + stagger)
+    }, 280)
 }
 
 export default { render, destroy }

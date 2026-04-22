@@ -148,7 +148,7 @@ app.router.add({
     },
 
     '/home'(event) {
-        let node = w2ui.main_sb.get(w2ui.main_sb.selected)
+        let node = w2ui.main_sb.get(w2ui.main_sb.selected || 'dashboard')
         if (node) {
             // if there was a selected node, go to it
             app.router.go(node.route)
