@@ -17,7 +17,7 @@ export default {
     app_tb: {
         name: 'app_tb',
         items: [
-            { id: 'home', text: 'Home', type: 'radio', group: 'main', icon: 'icon-home', route: '/home/dashboard' },
+            { id: 'home', text: 'Home', type: 'radio', group: 'main', icon: 'icon-home', route: '/home' },
             { id: 'projects', text: 'Projects', type: 'radio', group: 'main', icon: 'icon-pencil-ruler', route: '/projects' },
             { id: 'spacer1', type: 'spacer' },
             { id: 'user', text: 'User Name', type: 'menu',
@@ -35,6 +35,7 @@ export default {
     sb_proto: {
         flatButton: true,
         onFlat(event) {
+            this._savedSelected = this.selected
             if (event.detail.goFlat == true) {
                 w2ui.app_layout.set('left', { size: 45, minSize: 45, resizable: false })
                 app.main.prefs.set('ui-sidebar-size', 'small')
@@ -42,7 +43,12 @@ export default {
                 w2ui.app_layout.set('left', { size: 180, minSize: 100, resizable: true })
                 app.main.prefs.set('ui-sidebar-size', 'large')
             }
-        },
+            event.done(() => {
+                let saved = this.selected || this._savedSelected
+                this._savedSelected = null
+                if (saved && this.get(saved)) this.select(saved)
+            })
+    },
         onRender(event) {
             event.done(function () {
                 if (app.main.prefs.get('ui-sidebar-size') == 'small' && this.flat != true) {

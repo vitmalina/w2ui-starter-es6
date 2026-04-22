@@ -22,6 +22,14 @@ app.router.add({
         w2ui.app_tb.check('home')
     },
 
+    '/home'(event) {
+        let node = w2ui.main_sb.get(w2ui.main_sb.selected)
+        if (node) {
+            // if there was a selected node, go to it
+            app.router.go(node.route)
+        }
+    },
+
     '/home/users'(event) {
         w2ui.main_sb.select('home')
         w2ui.app_layout.html('main', main_grid)
