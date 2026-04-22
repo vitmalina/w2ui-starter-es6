@@ -71,6 +71,23 @@ export default {
                     { id: 'home', text: 'Users', icon: 'icon-users', route: '/home/users' },
                     { id: 'other', text: 'Other', icon: 'icon-callouts', route: '/home/other' },
                     { id: 'icons', text: 'Icons Lib', icon: 'icon-star', route: '/home/icons' },
+                    { id: 'readme', text: 'Read Me', icon: 'icon-books', route: '/home/readme' },
+                ],
+            },
+            { id: 'analytics', text: 'Analytics', icon: '', group: true, expanded: true,
+                nodes: [
+                    { id: 'reports', text: 'Reports', icon: 'icon-file', route: '/home/reports' },
+                    { id: 'performance', text: 'Performance', icon: 'icon-heartbeat', route: '/home/performance' },
+                    { id: 'activity', text: 'Activity', icon: 'icon-histogram', route: '/home/activity' },
+                    { id: 'revenue', text: 'Revenue', icon: 'icon-coin-dollar', route: '/home/revenue' },
+                ],
+            },
+            { id: 'management', text: 'Management', icon: '', group: true, expanded: true,
+                nodes: [
+                    { id: 'tasks', text: 'Tasks', icon: 'icon-list-check', route: '/home/tasks' },
+                    { id: 'messages', text: 'Messages', icon: 'icon-callouts', route: '/home/messages' },
+                    { id: 'notifications', text: 'Notifications', icon: 'icon-flag', route: '/home/notifications' },
+                    { id: 'settings', text: 'Settings', icon: 'icon-cog', route: '/home/settings' },
                 ],
             }
         ]

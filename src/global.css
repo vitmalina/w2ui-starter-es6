@@ -211,18 +211,18 @@ a:hover {
   margin: 12px 8px 0 0px;
   color: #8e8e8e;
   font-size: 13px;
-  /* &:after {
-                content: '▾'; // ⌄ ▾ ▿
-                display: inline;
-                float: right;
-                width: 10px;
-                color: #8e8e8e;
-                font-size: 14px;
-                margin-top: -2px;
-            } */
 }
 .w2ui-sidebar .w2ui-sidebar-body .w2ui-node-group :nth-child(1) {
   display: none;
+}
+.w2ui-sidebar .w2ui-sidebar-body .w2ui-node-group:after {
+  content: '▾';
+  display: inline;
+  float: right;
+  width: 10px;
+  color: #8e8e8e;
+  font-size: 14px;
+  margin-top: -2px;
 }
 .w2ui-sidebar .w2ui-sidebar-body .w2ui-node-flat:not(.sidebar-button) {
   padding: 6px 0;
@@ -292,6 +292,157 @@ a:hover {
 }
 .w2ui-grid .w2ui-grid-body table td {
   font-size: 13px;
+}
+/* -------- Read Me (markdown) -------- */
+.readme-host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background-color: #f5f6f8;
+}
+.readme-host .readme-toolbar {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 10px 14px 8px 18px;
+  background: #fff;
+  border-bottom: 1px solid #e9ebf0;
+  box-shadow: 0 1px 0 rgba(16, 24, 40, 0.03);
+}
+.readme-host .readme-toolbar .readme-back {
+  font: 600 13px/1 opensans, verdana;
+  color: #6c3bd1;
+  background: #f3f0fa;
+  border: 1px solid #e0d6ef;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.readme-host .readme-toolbar .readme-back:hover {
+  background: #ebe4f5;
+}
+.readme-host .readme-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+.readme-host .readme-loading {
+  padding: 40px;
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 14px;
+}
+.readme-host .readme-body {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 28px 36px;
+  background: #ffffff;
+  border: 1px solid #e9ebf0;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  color: #1f2440;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.readme-host .readme-body h1,
+.readme-host .readme-body h2,
+.readme-host .readme-body h3,
+.readme-host .readme-body h4,
+.readme-host .readme-body h5,
+.readme-host .readme-body h6 {
+  color: #1f2440;
+  margin: 1.4em 0 0.6em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.readme-host .readme-body h1 {
+  font-size: 26px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e9ebf0;
+  margin-top: 0;
+}
+.readme-host .readme-body h2 {
+  font-size: 20px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eef0f4;
+}
+.readme-host .readme-body h3 {
+  font-size: 17px;
+}
+.readme-host .readme-body h4 {
+  font-size: 15px;
+}
+.readme-host .readme-body p {
+  margin: 0.6em 0;
+}
+.readme-host .readme-body a {
+  color: #6c3bd1 !important;
+  text-decoration: none;
+}
+.readme-host .readme-body a:hover {
+  text-decoration: underline;
+}
+.readme-host .readme-body ul,
+.readme-host .readme-body ol {
+  padding-left: 24px;
+  margin: 0.6em 0;
+}
+.readme-host .readme-body li {
+  margin: 2px 0;
+}
+.readme-host .readme-body code {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 12.5px;
+  background: #f3f1f7;
+  color: #5a2ca0;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.readme-host .readme-body pre {
+  background: #1f2440;
+  color: #e6e8ef;
+  padding: 14px 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.readme-host .readme-body pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+.readme-host .readme-body blockquote {
+  margin: 0.8em 0;
+  padding: 2px 14px;
+  color: #6b7280;
+  border-left: 3px solid #d6cce4;
+  background: #faf9fc;
+  border-radius: 0 6px 6px 0;
+}
+.readme-host .readme-body table {
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  font-size: 13px;
+}
+.readme-host .readme-body table th,
+.readme-host .readme-body table td {
+  border: 1px solid #e9ebf0;
+  padding: 6px 10px;
+}
+.readme-host .readme-body table th {
+  background: #f5f3f8;
+}
+.readme-host .readme-body img {
+  max-width: 100%;
+}
+.readme-host .readme-body hr {
+  border: 0;
+  border-top: 1px solid #e9ebf0;
+  margin: 1.4em 0;
 }
 /* -------- Dashboard (main module) -------- */
 .dashboard-host {
