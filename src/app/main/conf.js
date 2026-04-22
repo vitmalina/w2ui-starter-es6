@@ -102,7 +102,7 @@ export default {
 
     main_grid: {
         name: 'main_grid',
-        url: app.context + 'api/users',
+        url: app.context + '../api/users',
         show: {
             toolbar: true,
             toolbarAdd: true,

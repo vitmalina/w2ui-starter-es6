@@ -1,5 +1,5 @@
 import router from './router.js'
-import { w2ui, w2alert, w2utils } from '../../libs/w2ui/w2ui.es6.min.js'
+import { w2ui, w2alert, w2utils } from '../libs/w2ui/w2ui.es6.min.js'
 
 let app = {
     name: 'MyApp',

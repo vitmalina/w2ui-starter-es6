@@ -29,7 +29,7 @@ export default {
 
     projects: {
         name: 'projects',
-        url: app.context + 'api/projects',
+        url: app.context + '../api/projects',
         show: {
             toolbar: true,
             footer: true
