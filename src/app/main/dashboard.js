@@ -75,8 +75,9 @@ function barChartOptions() {
             ...baseFont(),
             redrawOnParentResize: true,
             redrawOnWindowResize: true,
-            animations: { enabled: true, easing: 'easeinout', speed: 400,
-                animateGradually: { enabled: false }, dynamicAnimation: { enabled: true, speed: 250 } }
+            animations: { enabled: true, easing: 'easeinout', speed: 650,
+                animateGradually: { enabled: true, delay: 120 },
+                dynamicAnimation: { enabled: true, speed: 250 } }
         },
         series: [
             { name: 'Revenue', data: revenueSeries.revenue },
@@ -138,8 +139,9 @@ function radialChartOptions() {
             ...baseFont(),
             redrawOnParentResize: true,
             redrawOnWindowResize: true,
-            animations: { enabled: true, speed: 400,
-                animateGradually: { enabled: false }, dynamicAnimation: { enabled: true, speed: 250 } }
+            animations: { enabled: true, speed: 800,
+                animateGradually: { enabled: true, delay: 150 },
+                dynamicAnimation: { enabled: true, speed: 250 } }
         },
         series: performance.map(p => p.value),
         labels: performance.map(p => p.label),
@@ -189,8 +191,9 @@ function trafficChartOptions() {
             ...baseFont(),
             redrawOnParentResize: true,
             redrawOnWindowResize: true,
-            animations: { enabled: true, easing: 'easeinout', speed: 400,
-                animateGradually: { enabled: false }, dynamicAnimation: { enabled: true, speed: 250 } }
+            animations: { enabled: true, easing: 'easeinout', speed: 650,
+                animateGradually: { enabled: true, delay: 120 },
+                dynamicAnimation: { enabled: true, speed: 250 } }
         },
         series: trafficSeries,
         colors: [palette.primary, palette.accent],
@@ -227,8 +230,9 @@ function donutChartOptions() {
     return {
         chart: { type: 'donut', height: 300, ...baseFont(),
             redrawOnParentResize: true, redrawOnWindowResize: true,
-            animations: { enabled: true, speed: 400,
-                animateGradually: { enabled: false }, dynamicAnimation: { enabled: true, speed: 250 } } },
+            animations: { enabled: true, speed: 650,
+                animateGradually: { enabled: true, delay: 150 },
+                dynamicAnimation: { enabled: true, speed: 250 } } },
         series: channels.values,
         labels: channels.labels,
         colors: [palette.primary, palette.accent, palette.warning, palette.success, palette.info],
@@ -264,7 +268,9 @@ function donutChartOptions() {
 let charts = []
 let resizeObserver = null
 let resizeTimer = null
+let resizeEnableTimer = null
 let hostRef = null
+let lastWidth = 0
 
 function kpiCardHTML(k) {
     const up       = k.delta >= 0
@@ -397,23 +403,29 @@ function destroy() {
         try { resizeObserver.disconnect() } catch (e) { /* noop */ }
         resizeObserver = null
     }
-    if (resizeTimer) {
-        clearTimeout(resizeTimer)
-        resizeTimer = null
-    }
+    if (resizeTimer)       { clearTimeout(resizeTimer);       resizeTimer = null }
+    if (resizeEnableTimer) { clearTimeout(resizeEnableTimer); resizeEnableTimer = null }
     charts.forEach(c => { try { c.destroy() } catch (e) { /* noop */ } })
     charts = []
     hostRef = null
+    lastWidth = 0
 }
 
-function triggerResize() {
-    // Debounced but snappy (~40ms); pushes every chart to match its container.
+function triggerResize(entries) {
+    // Ignore if the width didn't actually change (ResizeObserver fires a synthetic
+    // initial callback on observe() which would otherwise abort the intro animation).
+    const w = entries && entries[0] && entries[0].contentRect
+        ? Math.round(entries[0].contentRect.width)
+        : (hostRef ? hostRef.clientWidth : 0)
+    if (w === lastWidth) return
+    lastWidth = w
+
     if (resizeTimer) clearTimeout(resizeTimer)
     resizeTimer = setTimeout(() => {
         resizeTimer = null
         charts.forEach(c => {
             try {
-                // updateOptions with redrawPaths=false keeps it fast
+                // redrawPaths=false, animate=false → fast, no intro anim replay
                 c.updateOptions({}, false, false, false)
             } catch (e) { /* noop */ }
         })
@@ -439,12 +451,16 @@ function render(hostEl) {
     bar.render(); rad.render(); trf.render(); dnt.render()
     charts = [bar, rad, trf, dnt]
 
-    // Snappy reflow: observe the host so charts resize when the layout/panel
-    // changes size (w2layout doesn't always fire window 'resize').
-    if (typeof ResizeObserver !== 'undefined') {
-        resizeObserver = new ResizeObserver(triggerResize)
-        resizeObserver.observe(hostEl)
-    }
+    // Attach the resize observer AFTER the intro animation has had time to play,
+    // otherwise the synthetic first ResizeObserver fire would cancel it.
+    lastWidth = hostEl.clientWidth
+    resizeEnableTimer = setTimeout(() => {
+        resizeEnableTimer = null
+        if (typeof ResizeObserver !== 'undefined' && hostRef === hostEl) {
+            resizeObserver = new ResizeObserver(triggerResize)
+            resizeObserver.observe(hostEl)
+        }
+    }, 1100) // slightly longer than the slowest chart's intro (radial ~800ms + stagger)
 }
 
 export default { render, destroy }
