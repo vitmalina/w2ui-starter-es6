@@ -9,7 +9,7 @@ export default {
         panels: [
             { type: 'top', size: '20px', overflow: 'hidden', hidden: true },
             { type: 'left', size: '180px', minSize: 100, resizable: true, style: 'border-right: 1px solid #ddd' },
-            { type: 'main', overflow: 'hidden', style: 'background-color: white;' },
+            { type: 'main', overflow: 'hidden' },
             { type: 'right', size: '400px', resizable: true, hidden: true, style: 'border-left: 1px solid #ddd' },
             { type: 'preview', size: '200px', overflow: 'hidden', hidden: true, resizable: true },
             { type: 'bottom', size: '40px', hidden: true }
@@ -39,7 +39,7 @@ export default {
         flatButton: true,
         onFlat(event) {
             if (event.detail.goFlat == true) {
-                w2ui.app_layout.set('left', { size: 35, minSize: 35, resizable: false })
+                w2ui.app_layout.set('left', { size: 45, minSize: 45, resizable: false })
                 app.main.prefs.set('ui-sidebar-size', 'small')
             } else {
                 w2ui.app_layout.set('left', { size: 180, minSize: 100, resizable: true })

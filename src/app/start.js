@@ -1,5 +1,5 @@
 import router from './router.js'
-import { w2ui, w2alert } from '../../libs/w2ui/w2ui.es6.min.js'
+import { w2ui, w2alert, w2utils } from '../../libs/w2ui/w2ui.es6.min.js'
 
 let app = {
     name: 'MyApp',
@@ -9,6 +9,8 @@ let app = {
 
 // TODO: can be removed
 window.w2ui = w2ui
+
+w2utils.settings.recordHeight = 40
 
 // if localhost, then clear
 let loc = String(document.location)
