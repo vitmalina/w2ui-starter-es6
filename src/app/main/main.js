@@ -227,7 +227,7 @@ function openUserForm(record) {
         form.recid = 0
         form.record = {
             fname: '', lname: '', email: '', phone: '',
-            department: '', role: '', status: 'Active'
+            department: '', role: '', status: 'Active', comments: ''
         }
     }
     w2popup.open({
@@ -235,7 +235,7 @@ function openUserForm(record) {
         body: '<div id="main-form-box" style="width: 100%; height: 100%;"></div>',
         style: 'padding: 0',
         width: 520,
-        height: 480,
+        height: 520,
         showMax: false,
         async onOpen(event) {
             await event.complete

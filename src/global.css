@@ -206,6 +206,7 @@ a:hover {
   text-transform: uppercase;
 }
 .w2ui-sidebar .w2ui-sidebar-body .w2ui-node-group {
+  border-top: 1px solid #e3e3e3;
   margin-top: 10px;
   padding-top: 14px;
   margin: 12px 8px 0 0px;
@@ -223,6 +224,9 @@ a:hover {
   color: #8e8e8e;
   font-size: 14px;
   margin-top: -2px;
+}
+.w2ui-sidebar .w2ui-sidebar-body .w2ui-node-group:first-child {
+  border-top: none;
 }
 .w2ui-sidebar .w2ui-sidebar-body .w2ui-node-flat:not(.sidebar-button) {
   padding: 6px 0;

@@ -1,3 +1,4 @@
+import { w2popup } from '../../libs/w2ui/w2ui.es6.min.js'
 export default {
     // --- Application  Layout
     app_layout: {
@@ -134,30 +135,62 @@ export default {
     },
 
     // --- User Edit Form (rendered inside w2popup)
+    // fields as plain object: use type 'group' + nested fields object (w2ui 2.0); object key is the group title.
     main_form: {
         name: 'main_form',
         style: 'border: 0; background-color: transparent;',
-        fields: [
-            { field: 'fname',  type: 'text', required: true,
-              html: { label: 'First Name', attr: 'style="width: 300px"' } },
-            { field: 'lname',  type: 'text', required: true,
-              html: { label: 'Last Name',  attr: 'style="width: 300px"' } },
-            { field: 'email',  type: 'email', required: true,
-              html: { label: 'Email',      attr: 'style="width: 300px"' } },
-            { field: 'phone',  type: 'text',
-              html: { label: 'Phone',      attr: 'style="width: 300px"' } },
-            { field: 'department', type: 'list',
-              options: { items: ['IT', 'Engineering', 'Sales', 'Marketing', 'Support', 'HR', 'Finance', 'Operations'] },
-              html: { label: 'Department', attr: 'style="width: 300px"' } },
-            { field: 'role', type: 'list',
-              options: { items: ['Admin', 'Manager', 'Developer', 'Designer', 'Analyst', 'Support', 'Intern'] },
-              html: { label: 'Role',       attr: 'style="width: 300px"' } },
-            { field: 'status', type: 'list',
-              options: { items: ['Active', 'Inactive', 'Pending'] },
-              html: { label: 'Status',     attr: 'style="width: 300px"' } },
-            { field: 'comments', type: 'textarea',
-              html: { label: 'Comments', attr: 'style="width: 300px; height: 80px"' } }
-        ],
+        fields: {
+            'Contact': {
+                type: 'group',
+                fields: {
+                    fname: {
+                        type: 'text', required: true,
+                        html: { label: 'First Name', span: 4, attr: 'style="width: 300px"' }
+                    },
+                    lname: {
+                        type: 'text', required: true,
+                        html: { label: 'Last Name', span: 4, attr: 'style="width: 300px"' }
+                    },
+                    email: {
+                        type: 'email', required: true,
+                        html: { label: 'Email', span: 4, attr: 'style="width: 300px"' }
+                    },
+                    phone: {
+                        type: 'text',
+                        html: { label: 'Phone', span: 4, attr: 'style="width: 300px"' }
+                    }
+                }
+            },
+            'Organization': {
+                type: 'group',
+                fields: {
+                    department: {
+                        type: 'list',
+                        options: { items: ['IT', 'Engineering', 'Sales', 'Marketing', 'Support', 'HR', 'Finance', 'Operations'] },
+                        html: { label: 'Department', span: 4, attr: 'style="width: 180px"' }
+                    },
+                    role: {
+                        type: 'list',
+                        options: { items: ['Admin', 'Manager', 'Developer', 'Designer', 'Analyst', 'Support', 'Intern'] },
+                        html: { label: 'Role', span: 4, attr: 'style="width: 180px"' }
+                    },
+                    status: {
+                        type: 'list',
+                        options: { items: ['Active', 'Inactive', 'Pending'] },
+                        html: { label: 'Status', span: 4, attr: 'style="width: 180px"' }
+                    }
+                }
+            },
+            'Notes': {
+                type: 'group',
+                fields: {
+                    comments: {
+                        type: 'textarea',
+                        html: { label: 'Comments', span: 0, attr: 'style="width: 100%; height: 80px; box-sizing: border-box"' }
+                    }
+                }
+            }
+        },
         record: {
             fname: '', lname: '', email: '', phone: '',
             department: '', role: '', status: 'Active', comments: ''
