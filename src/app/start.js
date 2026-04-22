@@ -18,9 +18,9 @@ if (loc.substr(0, 5) != 'file:' && loc.substr(0, 16) != 'http://localhost') app.
 
 app.router.on('error', (event) => {
     w2alert(`Route "${event.detail.hash}" is not defined.`)
-    app.router.go('/home')
+    app.router.go('/home/dashboard')
 })
-router.init('/home')
+router.init('/home/dashboard')
 
 window.app = app
 export default app

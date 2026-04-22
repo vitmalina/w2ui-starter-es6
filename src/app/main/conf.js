@@ -17,7 +17,7 @@ export default {
     app_tb: {
         name: 'app_tb',
         items: [
-            { id: 'home', text: 'Home', type: 'radio', group: 'main', icon: 'icon-home', route: '/home' },
+            { id: 'home', text: 'Home', type: 'radio', group: 'main', icon: 'icon-home', route: '/home/dashboard' },
             { id: 'projects', text: 'Projects', type: 'radio', group: 'main', icon: 'icon-pencil-ruler', route: '/projects' },
             { id: 'spacer1', type: 'spacer' },
             { id: 'user', text: 'User Name', type: 'menu',
@@ -61,9 +61,10 @@ export default {
         nodes: [
             { id: 'general', text: 'General', icon: '', group: true, expanded: true,
                 nodes: [
-                    { id: 'home', text: 'Home', icon: 'icon-home', route: '/home' },
+                    { id: 'dashboard', text: 'Dashboard', icon: 'icon-stats', route: '/home/dashboard' },
+                    { id: 'home', text: 'Users', icon: 'icon-users', route: '/home/users' },
                     { id: 'other', text: 'Other', icon: 'icon-callouts', route: '/home/other' },
-                    { id: 'icons', text: 'Icons', icon: 'icon-star', route: '/home/icons' },
+                    { id: 'icons', text: 'Icons Lib', icon: 'icon-star', route: '/home/icons' },
                 ],
             }
         ]

@@ -1,5 +1,6 @@
 import conf from './conf.js'
 import prefs from './prefs.js'
+import dashboard from './dashboard.js'
 import { query, w2ui, w2utils, w2toolbar, w2layout, w2sidebar, w2grid, w2form, w2popup } from '../../libs/w2ui/w2ui.es6.min.js'
 
 let app_layout = new w2layout(conf.app_layout)
@@ -21,9 +22,25 @@ app.router.add({
         w2ui.app_tb.check('home')
     },
 
-    '/home'(event) {
+    '/home/users'(event) {
         w2ui.main_sb.select('home')
         w2ui.app_layout.html('main', main_grid)
+    },
+
+    '/home/dashboard'(event) {
+        w2ui.main_sb.select('dashboard')
+        let promise = w2ui.app_layout.html('main',
+            '<div id="dashboard-host" class="dashboard-host" ' +
+            'style="width:100%;height:100%;overflow:auto;"></div>')
+        // destroy chart instances when the main panel switches to something else,
+        // otherwise ApexCharts animations keep writing to detached SVG nodes.
+        if (promise && typeof promise.removed == 'function') {
+            promise.removed(() => dashboard.destroy())
+        }
+        requestAnimationFrame(() => {
+            let host = document.getElementById('dashboard-host')
+            if (host) dashboard.render(host)
+        })
     },
 
     '/home/other'(event) {
@@ -41,7 +58,7 @@ app.router.add({
                 style="width: 100%; height: 100%; border: 0; display: block;"></iframe>`)
     }
 })
-app.main = { prefs, openUserForm }
+app.main = { prefs, openUserForm, dashboard }
 app.main.prefs.init({
     "ui-sidebar-size":"large"
 })
