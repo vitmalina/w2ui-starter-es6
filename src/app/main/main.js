@@ -1,11 +1,12 @@
 import conf from './conf.js'
 import prefs from './prefs.js'
-import { query, w2ui, w2toolbar, w2layout, w2sidebar, w2grid } from '../../libs/w2ui/w2ui.es6.min.js'
+import { query, w2ui, w2utils, w2toolbar, w2layout, w2sidebar, w2grid, w2form, w2popup } from '../../libs/w2ui/w2ui.es6.min.js'
 
 let app_layout = new w2layout(conf.app_layout)
 let app_tb = new w2toolbar(conf.app_tb)
 let main_sb = new w2sidebar(Object.assign(conf.main_sb, conf.sb_proto))
 let main_grid = new w2grid(conf.main_grid)
+let main_form = new w2form(conf.main_form)
 
 // display
 app_tb.render('#app-toolbar')
@@ -40,10 +41,37 @@ app.router.add({
                 style="width: 100%; height: 100%; border: 0; display: block;"></iframe>`)
     }
 })
-app.main = { prefs }
+app.main = { prefs, openUserForm }
 app.main.prefs.init({
     "ui-sidebar-size":"large"
 })
+
+function openUserForm(record) {
+    let form = w2ui.main_form
+    let isEdit = !!record
+    if (isEdit) {
+        form.recid = record.recid
+        form.record = w2utils.clone(record)
+    } else {
+        form.recid = 0
+        form.record = {
+            fname: '', lname: '', email: '', phone: '',
+            department: '', role: '', status: 'Active'
+        }
+    }
+    w2popup.open({
+        title: isEdit ? `Edit User: ${record.fname ?? ''} ${record.lname ?? ''}`.trim() : 'Add New User',
+        body: '<div id="main-form-box" style="width: 100%; height: 100%;"></div>',
+        style: 'padding: 0',
+        width: 520,
+        height: 480,
+        showMax: false,
+        async onOpen(event) {
+            await event.complete
+            form.render('#main-form-box')
+        }
+    })
+}
 
 app.router.process()
 
