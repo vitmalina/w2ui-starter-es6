@@ -8,6 +8,8 @@ let app_tb = new w2toolbar(conf.app_tb)
 let main_sb = new w2sidebar(Object.assign(conf.main_sb, conf.sb_proto))
 let main_grid = new w2grid(conf.main_grid)
 let main_form = new w2form(conf.main_form)
+let req_form = new w2form(conf.req_form)
+let req_grid = new w2grid(conf.req_grid)
 
 // --- Read Me: in-panel .md navigation (no iframes)
 let readmeBackStack = []
@@ -142,6 +144,7 @@ app.router.add({
         w2ui.app_layout.html('left', main_sb)
         w2ui.app_tb.uncheck(...w2ui.app_tb.get())
         w2ui.app_tb.check('home')
+        w2ui.app_layout.hide('right', true)
     },
 
     '/home'(event) {
@@ -173,12 +176,16 @@ app.router.add({
         })
     },
 
-    '/home/other'(event) {
-        w2ui.main_sb.select('other')
-        w2ui.app_layout.html('main', `
-            <div class="w2ui-centered" style="font-size: 16px; color: gray">
-                You can refresh this page, it will still come to this sidebar item
-            </div>`)
+    '/home/requests'(event) {
+        w2ui.main_sb.select('requests')
+        w2ui.app_layout.show('right', true)
+        w2ui.app_layout.html('right', req_form)
+        w2ui.app_layout.html('main', req_grid)
+        let first = req_grid.records[0]
+        if (first) {
+            req_grid.selectNone()
+            req_grid.select(first.recid)
+        }
     },
 
     '/home/icons'(event) {

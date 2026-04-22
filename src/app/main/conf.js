@@ -1,4 +1,5 @@
-import { w2popup } from '../../libs/w2ui/w2ui.es6.min.js'
+import { w2popup, w2ui, w2utils } from '../../libs/w2ui/w2ui.es6.min.js'
+
 export default {
     // --- Application  Layout
     app_layout: {
@@ -8,7 +9,7 @@ export default {
             { type: 'top', size: '20px', overflow: 'hidden', hidden: true },
             { type: 'left', size: '180px', minSize: 100, resizable: true, style: 'border-right: 1px solid #ddd' },
             { type: 'main', overflow: 'hidden' },
-            { type: 'right', size: '400px', resizable: true, hidden: true, style: 'border-left: 1px solid #ddd' },
+            { type: 'right', size: -350, minSize: 160, resizable: true, hidden: true, style: 'border-left: 1px solid #ddd' },
             { type: 'preview', size: '200px', overflow: 'hidden', hidden: true, resizable: true },
             { type: 'bottom', size: '40px', hidden: true }
         ]
@@ -25,6 +26,7 @@ export default {
             { id: 'spacer1', type: 'spacer' },
             { id: 'user', text: 'User Name', type: 'menu',
                 items: [
+                    { id: 'profile', text: 'Profile', icon: 'icon-user' },
                     { id: 'logout', text: 'Logout', icon: 'icon-off' },
                 ]
             }
@@ -53,7 +55,7 @@ export default {
                 this._savedSelected = null
                 if (saved && this.get(saved)) this.select(saved)
             })
-    },
+        },
         onRender(event) {
             event.done(function () {
                 if (app.main.prefs.get('ui-sidebar-size') == 'small' && this.flat != true) {
@@ -74,7 +76,7 @@ export default {
                 nodes: [
                     { id: 'dashboard', text: 'Dashboard', icon: 'icon-stats', route: '/home/dashboard' },
                     { id: 'home', text: 'Users', icon: 'icon-users', route: '/home/users' },
-                    { id: 'other', text: 'Other', icon: 'icon-callouts', route: '/home/other' },
+                    { id: 'requests', text: 'Requests', icon: 'icon-drawer', route: '/home/requests' },
                     { id: 'icons', text: 'Icons Lib', icon: 'icon-star', route: '/home/icons' },
                     { id: 'readme', text: 'Read Me', icon: 'icon-books', route: '/home/readme' },
                 ],
@@ -228,6 +230,109 @@ export default {
             Cancel() {
                 w2popup.close()
             }
+        }
+    },
+
+    req_grid: {
+        name: 'req_grid',
+        recordHeight: 65,
+        multiSelect: false,
+        style: 'border: 0',
+        show: {
+            toolbar: false,
+            footer: false
+        },
+        columns: [
+            {
+                field: 'title',
+                text: 'Request',
+                size: '100%',
+                sortable: true,
+                render(rec) {
+                    let st = rec.status || ''
+                    let colors = { Approved: '#2a9d3e', Pending: '#d68f00', Declined: '#c44', Review: '#2563eb', Draft: '#6b7280' }
+                    let c = colors[st] || '#6b7280'
+                    let meta = `
+                        <span class="req-grid-dot" style="background:${c}"></span>
+                        <span class="req-grid-status">${w2utils.encodeTags(st)}</span> ${w2utils.encodeTags(rec.submitted || '')}
+                    `
+                    return `
+                    <div class="req-grid-cell">
+                        <div class="req-grid-title">${w2utils.encodeTags(rec.title || '')}</div>
+                        <div class="req-grid-meta">${meta}</div>
+                    </div>`
+                }
+            }
+        ],
+        async onSelect(event) {
+            await event.complete
+            let sel = this.getSelection()
+            if (sel.length === 0) return
+            let rec = this.get(sel[0])
+            if (rec && w2ui.req_form) {
+                w2ui.req_form.record = w2utils.clone(rec)
+                w2ui.req_form.refresh()
+            }
+        },
+        records: [
+            { recid: 1, reqId: 'REQ-2401', title: 'Provision staging API keys', status: 'Pending', submitted: 'Apr 18, 2026 · 09:14', requester: 'Morgan Lee', department: 'Platform', priority: 'High', assignee: 'Alex Kim', description: 'Need scoped keys for the payments sandbox so QA can run the regression pack without touching production.' },
+            { recid: 2, reqId: 'REQ-2402', title: 'Extend SSO session to 12h for mobile', status: 'Review', submitted: 'Apr 17, 2026 · 16:42', requester: 'Priya Shah', department: 'Security', priority: 'Normal', assignee: 'Jordan Hayes', description: 'Product wants fewer logins on tablets used in the field. Risk assessment attached; awaiting SecOps sign-off.' },
+            { recid: 3, reqId: 'REQ-2403', title: 'Archive 2019 invoices to cold storage', status: 'Approved', submitted: 'Apr 16, 2026 · 11:05', requester: 'Chris Ortiz', department: 'Finance', priority: 'Low', assignee: 'Sam Rivera', description: 'Quarterly retention job; Finance confirmed legal hold exceptions are tagged in the ERP export.' },
+            { recid: 4, reqId: 'REQ-2404', title: 'New hire laptops — Design pod (4)', status: 'Pending', submitted: 'Apr 15, 2026 · 08:50', requester: 'Nina Brooks', department: 'IT', priority: 'High', assignee: 'IT Fulfillment', description: 'M2 Pro, 32GB, standard engineering image. Delivery to floor 7 by April 22.' },
+            { recid: 5, reqId: 'REQ-2405', title: 'Whitelist partner IP range for webhooks', status: 'Declined', submitted: 'Apr 14, 2026 · 14:18', requester: 'Daniel Voss', department: 'Integrations', priority: 'Normal', assignee: 'NetOps', description: 'Rejected: partner asked for /20; approved narrowed /28 after threat modeling review.' },
+            { recid: 6, reqId: 'REQ-2406', title: 'Localization pass — Nordic checkout copy', status: 'Draft', submitted: 'Apr 12, 2026 · 10:22', requester: 'Elin Andersson', department: 'Marketing', priority: 'Normal', assignee: 'Unassigned', description: 'Strings ready in Lokalise; waiting for legal disclaimer variants for FI and NO.' }
+        ]
+    },
+
+    req_form: {
+        name: 'req_form',
+        style: 'border: 0; background: transparent; padding: 6px 8px 10px',
+        focus: -1,
+        fields: {
+            'Preview': {
+                type: 'group',
+                fields: {
+                    reqId: {
+                        type: 'text',
+                        html: { label: 'ID', span: 4, attr: 'style="width: 100%; box-sizing: border-box"' }
+                    },
+                    title: {
+                        type: 'text',
+                        html: { label: 'Title', span: 4, attr: 'style="width: 100%; box-sizing: border-box"' }
+                    },
+                    status: {
+                        type: 'text',
+                        html: { label: 'Status', span: 4, attr: 'style="width: 100%; box-sizing: border-box"' }
+                    },
+                    submitted: {
+                        type: 'text',
+                        html: { label: 'Submitted', span: 4, attr: 'style="width: 100%; box-sizing: border-box"' }
+                    },
+                    requester: {
+                        type: 'text',
+                        html: { label: 'Requester', span: 4, attr: 'style="width: 100%; box-sizing: border-box"' }
+                    },
+                    department: {
+                        type: 'text',
+                        html: { label: 'Department', span: 4, attr: 'style="width: 100%; box-sizing: border-box"' }
+                    },
+                    priority: {
+                        type: 'text',
+                        html: { label: 'Priority', span: 4, attr: 'style="width: 100%; box-sizing: border-box"' }
+                    },
+                    assignee: {
+                        type: 'text',
+                        html: { label: 'Assignee', span: 4, attr: 'style="width: 100%; box-sizing: border-box"' }
+                    },
+                    description: {
+                        type: 'textarea',
+                        html: { label: 'Details', span: 4, attr: 'style="width: 100%; height: 100px; box-sizing: border-box; resize: vertical"' }
+                    }
+                }
+            }
+        },
+        record: {
+            reqId: '', title: '', status: '', submitted: '', requester: '', department: '', priority: '', assignee: '', description: ''
         }
     }
 }
