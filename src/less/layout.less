@@ -26,6 +26,11 @@
             border: 1px solid #d8cbdf;
             background-color: #f6f3f8;
         }
+        // Without this, the break can paint wrong vs adjacent controls (w2ui buttons use z-index:20)
+        .w2ui-tb-break {
+            z-index: 4;
+            margin-top: 5px;
+        }
     }
 }
 

@@ -69,6 +69,10 @@ a:hover {
   border: 1px solid #d8cbdf;
   background-color: #f6f3f8;
 }
+#app-toolbar.w2ui-toolbar .w2ui-scroll-wrapper .w2ui-tb-break {
+  z-index: 4;
+  margin-top: 5px;
+}
 .w2ui-sidebar .w2ui-sidebar-body .w2ui-node-group :nth-child(1) {
   display: none;
 }

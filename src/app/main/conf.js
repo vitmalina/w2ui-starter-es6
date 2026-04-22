@@ -20,6 +20,8 @@ export default {
         items: [
             { id: 'home', text: 'Home', type: 'radio', group: 'main', icon: 'icon-home', route: '/home' },
             { id: 'projects', text: 'Projects', type: 'radio', group: 'main', icon: 'icon-pencil-ruler', route: '/projects' },
+            { id: 'main-nav-divider', type: 'break' },
+            { id: 'web-demos', text: 'Web Demos', type: 'button', icon: 'icon-earth' },
             { id: 'spacer1', type: 'spacer' },
             { id: 'user', text: 'User Name', type: 'menu',
                 items: [
@@ -28,7 +30,9 @@ export default {
             }
         ],
         onClick(event) {
-
+            if (event.target === 'web-demos') {
+                document.location = 'https://w2ui.com/web/demos/#/combo/1'
+            }
         }
     },
 
