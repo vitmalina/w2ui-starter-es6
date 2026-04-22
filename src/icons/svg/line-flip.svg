@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="491px" height="478px" viewBox="0 0 491 478" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-12" fill="none" x="0" y="15" width="463" height="463"></rect>
+        <g id="line-curve2-copy-9" transform="translate(234.500000, 269.500000) rotate(45.000000) translate(-234.500000, -269.500000) translate(51.000000, 254.000000)" fill="#444444" fill-rule="nonzero">
+            <rect id="Rectangle" x="0.737896426" y="0.246981111" width="366" height="30"></rect>
+        </g>
+        <rect id="Rectangle-Copy-13" fill="#000000" transform="translate(147.500000, 336.500000) rotate(45.000000) translate(-147.500000, -336.500000) " x="124" y="313" width="47" height="47"></rect>
+        <rect id="Rectangle-Copy-14" fill="#000000" transform="translate(60.234019, 421.234019) rotate(45.000000) translate(-60.234019, -421.234019) " x="36.7340187" y="397.734019" width="47" height="47"></rect>
+        <g id="Group-2" transform="translate(353.000000, 138.000000) rotate(-135.000000) translate(-353.000000, -138.000000) translate(262.000000, 34.000000)" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path" points="3.86535248e-12 117.04 90.51 207.55 181.02 117.04 113.137 117.04 116.407604 0.553503078 71.1536037 0.553503078 67.883 117.04"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+<path d="M192 232c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z" fill="#444444"></path>
+<path d="M352 232c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z" fill="#444444"></path>
+<path d="M192 392c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z" fill="#444444"></path>
+<path d="M352 392c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z" fill="#444444"></path>
+<path d="M456.041 80l55.959-55.958v-24.042h-24.041l-55.959 55.958-55.959-55.958h-24.041v24.042l55.959 55.958-55.959 55.958v24.042h24.041l55.959-55.958 55.959 55.958h24.041v-24.042z" fill="#444444"></path>
+<path d="M0 384h32v64h-32v-64z" fill="#444444"></path>
+<path d="M0 288h32v64h-32v-64z" fill="#444444"></path>
+<path d="M416 224h32v64h-32v-64z" fill="#444444"></path>
+<path d="M416 416h32v64h-32v-64z" fill="#444444"></path>
+<path d="M416 320h32v64h-32v-64z" fill="#444444"></path>
+<path d="M0 192h32v64h-32v-64z" fill="#444444"></path>
+<path d="M0 96h32v64h-32v-64z" fill="#444444"></path>
+<path d="M256 64h64v32h-64v-32z" fill="#444444"></path>
+<path d="M160 64h64v32h-64v-32z" fill="#444444"></path>
+<path d="M64 64h64v32h-64v-32z" fill="#444444"></path>
+<path d="M224 480h64v32h-64v-32z" fill="#444444"></path>
+<path d="M320 480h64v32h-64v-32z" fill="#444444"></path>
+<path d="M128 480h64v32h-64v-32z" fill="#444444"></path>
+<path d="M32 480h64v32h-64v-32z" fill="#444444"></path>
+</svg>

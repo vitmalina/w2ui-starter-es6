@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="410px" height="410px" viewBox="0 0 410 410" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>direction-normal</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="direction-normal" transform="translate(205.000000, 205.000000) rotate(90.000000) translate(-205.000000, -205.000000) ">
+            <rect id="Rectangle" x="0" y="0" width="410" height="410" fill="none"></rect>
+            <g id="Group" transform="translate(1.000000, 46.500000)" fill="#000000" fill-rule="nonzero">
+                <g transform="translate(246.000000, 158.500000) rotate(90.000000) translate(-246.000000, -158.500000) translate(88.000000, 16.000000)" id="Path">
+                    <polygon points="157.966839 162.198486 257.826325 265 316 285 157.964944 121 -9.09494702e-13 285 57.1920964 265"></polygon>
+                    <polygon points="157.966839 61.1984859 257.826325 164 316 164 157.964944 0 0 164 57.1920964 164"></polygon>
+                </g>
+                <g transform="translate(0.000000, 107.000000)" id="Oval">
+                    <ellipse cx="51.0301205" cy="51" rx="51.0301205" ry="51"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

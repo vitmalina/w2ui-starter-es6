@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="463px" height="463px" viewBox="0 0 463 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-49" fill="none" x="0" y="0" width="463" height="463"></rect>
+        <g id="line-curve2-copy-27" transform="translate(24.000000, 232.000000) rotate(90.000000) translate(-24.000000, -232.000000) translate(-95.000000, 220.000000)" fill="#444444" fill-rule="nonzero">
+            <rect id="Rectangle" x="0.5" y="0.323333333" width="237" height="23"></rect>
+        </g>
+        <g id="line-curve2-copy-28" transform="translate(55.000000, 232.000000) rotate(90.000000) translate(-55.000000, -232.000000) translate(-64.000000, 220.000000)" fill="#444444" fill-rule="nonzero">
+            <rect id="Rectangle" x="0.5" y="0.323333333" width="237" height="23"></rect>
+        </g>
+        <g id="line-curve2-copy-29" transform="translate(107.000000, 232.000000) rotate(90.000000) translate(-107.000000, -232.000000) translate(-12.000000, 220.000000)" fill="#444444" fill-rule="nonzero">
+            <rect id="Rectangle" x="0.5" y="0.323333333" width="237" height="23"></rect>
+        </g>
+        <g id="line-curve2-copy-30" transform="translate(192.000000, 232.000000) rotate(90.000000) translate(-192.000000, -232.000000) translate(73.000000, 220.000000)" fill="#444444" fill-rule="nonzero">
+            <rect id="Rectangle" x="0.5" y="0.323333333" width="237" height="23"></rect>
+        </g>
+        <path d="M439,99 C452.254834,99 463,109.745166 463,123 L463,341 C463,354.254834 452.254834,365 439,365 L24,365 C10.745166,365 0,354.254834 0,341 L0,123 C0,109.745166 10.745166,99 24,99 L439,99 Z M439,114 L24,114 C19.1181973,114 15.1442086,117.886814 15,122.734638 L15,123 L15,341 C15,345.881803 18.8868137,349.855791 23.7346377,349.996163 L24,350 L439,350 C443.881803,350 447.855791,346.113186 448,341.265362 L448,341 L448,123 C448,118.118197 444.113186,114.144209 439.265362,114.003837 L439,114 Z" id="Rectangle" fill="#000000" fill-rule="nonzero"></path>
+        <g id="line-curve2-copy-31" transform="translate(329.000000, 232.000000) rotate(90.000000) translate(-329.000000, -232.000000) translate(210.000000, 220.000000)" fill="#444444" fill-rule="nonzero">
+            <rect id="Rectangle" x="0.5" y="0.323333333" width="237" height="23"></rect>
+        </g>
+    </g>
+</svg>

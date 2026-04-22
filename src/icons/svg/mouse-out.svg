@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="772px" height="744px" viewBox="0 0 772 744" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M266,0 L266,176 C266,201.405098 245.405098,222 220,222 L0,222 L0,171 L215,171 L215,0 L266,0 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+        <g id="mouse-click-copy" transform="translate(290.000000, 272.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M216.306695,253.948334 L359.412562,387.081667 L397.134767,349.348334 L253.995577,216.215 L321.075787,149.148334 L85.7452109,85.5816672 L149.293131,320.981667 L216.306695,253.948334 Z M118.402244,436.715 L0.603660937,0.448334375 L436.741667,118.248334 L338.837216,216.215 L481.976406,349.348334 L359.412562,471.915 L216.306695,338.781667 L118.402244,436.715 Z" id="interaction-click"></path>
+        </g>
+    </g>
+</svg>

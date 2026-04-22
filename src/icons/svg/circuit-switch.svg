@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="290px" height="290px" viewBox="0 0 290 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="none" transform="translate(145.000000, 145.000000) rotate(180.000000) translate(-145.000000, -145.000000) " x="0" y="0" width="290" height="290"></rect>
+        <g id="capacitor-copy" transform="translate(5.000000, 23.000000)">
+            <polygon id="XMLID_1383_" fill="#000000" fill-rule="nonzero" points="277 129 230 129 230 145 277 145"></polygon>
+            <polygon id="XMLID_1384_" fill="#000000" fill-rule="nonzero" points="51.1911189 133.641161 -2.47458304e-13 133.641161 -2.47458304e-13 150 59.489048 150 180 8.23327218 166.729143 0"></polygon>
+            <circle id="Oval" fill="#020202" cx="53" cy="141" r="25"></circle>
+            <circle id="Oval-Copy-2" fill="#000000" cx="225" cy="137" r="25"></circle>
+        </g>
+    </g>
+</svg>

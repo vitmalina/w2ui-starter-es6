@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="340px" height="323px" viewBox="0 0 340 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>table-cell copy</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="table-cell-copy" fill="#000000" fill-rule="nonzero">
+            <path d="M99,0 L99,91 L2,91 L2,0 L99,0 Z M83,12 L18,12 L18,79 L83,79 L83,12 Z" id="Rectangle"></path>
+            <path d="M220,0 L220,91 L122,91 L122,0 L220,0 Z M204,12 L138,12 L138,79 L204,79 L204,12 Z" id="Rectangle-Copy-26"></path>
+            <polygon id="Rectangle-Copy-27" points="220 115 220 206 122 206 122 115"></polygon>
+            <path d="M98,232 L98,323 L0,323 L0,232 L98,232 Z M82,244 L16,244 L16,311 L82,311 L82,244 Z" id="Rectangle-Copy-31"></path>
+            <path d="M218,232 L218,323 L120,323 L120,232 L218,232 Z M202,244 L136,244 L136,311 L202,311 L202,244 Z" id="Rectangle-Copy-32"></path>
+            <path d="M338,232 L338,323 L241,323 L241,232 L338,232 Z M322,244 L257,244 L257,311 L322,311 L322,244 Z" id="Rectangle-Copy-33"></path>
+            <path d="M100,115 L100,206 L2,206 L2,115 L100,115 Z M84,127 L18,127 L18,194 L84,194 L84,127 Z" id="Rectangle-Copy-28"></path>
+            <path d="M340,115 L340,206 L242,206 L242,115 L340,115 Z M324,127 L258,127 L258,194 L324,194 L324,127 Z" id="Rectangle-Copy-30"></path>
+            <path d="M340,0 L340,91 L242,91 L242,0 L340,0 Z M324,12 L258,12 L258,79 L324,79 L324,12 Z" id="Rectangle-Copy-29"></path>
+        </g>
+    </g>
+</svg>

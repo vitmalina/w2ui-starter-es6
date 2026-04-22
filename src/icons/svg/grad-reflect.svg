@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="464px" height="463px" viewBox="0 0 464 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-71" fill="none" x="0" y="0" width="463" height="463"></rect>
+        <g id="marker-arrow2-copy-6" transform="translate(103.500000, 225.500000) scale(-1, 1) translate(-103.500000, -225.500000) translate(0.000000, 96.000000)" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path-Copy-4" points="0.00327009219 115.945894 -1.1031176e-12 145.794788 67.4293107 145.794788 67.4701872 259 207 129.83086 67.4293107 0 67.4701872 116.007493"></polygon>
+        </g>
+        <g id="marker-arrow2-copy-5" transform="translate(257.000000, 96.000000)" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path-Copy-4" points="0.00327009219 115.945894 -1.1031176e-12 145.794788 67.4293107 145.794788 67.4701872 259 207 129.83086 67.4293107 0 67.4701872 116.007493"></polygon>
+        </g>
+        <path d="M216,29 L216,79 L247,79 L247,29 L216,29 Z M216,115 L216,165 L247,165 L247,115 L216,115 Z M216,201 L216,251 L247,251 L247,201 L216,201 Z M216,287 L216,337 L247,337 L247,287 L216,287 Z M216,373 L216,423 L247,423 L247,373 L216,373 Z" id="Line" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

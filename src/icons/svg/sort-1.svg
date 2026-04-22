@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="602px" height="437px" viewBox="0 0 602 437" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>sort copy</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sort-copy" fill="#444444" fill-rule="nonzero">
+            <polygon id="Path" transform="translate(116.190000, 218.500000) scale(1, -1) translate(-116.190000, -218.500000) " points="149.387 338.323284 149.387 0 82.993 0 82.993 338.323284 5.68434189e-14 338.323284 116.19 437 232.38 338.323284"></polygon>
+            <polygon id="Path" points="310 372 602 372 602 423.87 310 423.87"></polygon>
+            <polygon id="Path" points="310 144 450 144 450 195.872 310 195.872"></polygon>
+            <polygon id="Path" points="310 30 390 30 390 81.871 310 81.871"></polygon>
+            <polygon id="Path" points="310 258 521 258 521 309.871 310 309.871"></polygon>
+        </g>
+    </g>
+</svg>

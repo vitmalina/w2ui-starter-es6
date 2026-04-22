@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="290px" height="290px" viewBox="0 0 290 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-18" fill="none" transform="translate(145.000000, 145.000000) rotate(180.000000) translate(-145.000000, -145.000000) " x="0" y="0" width="290" height="290"></rect>
+        <g id="capacitor" transform="translate(15.000000, 21.000000)" fill="#000000" fill-rule="nonzero">
+            <polygon id="XMLID_1383_" points="260 108.702044 163.772727 108.702044 163.772727 58 144 58 144 179 163.772727 179 163.772727 128.297956 260 128.297956"></polygon>
+            <polygon id="XMLID_1384_" points="96.2272727 108.166667 0 108.166667 0 127.833333 96.2272727 127.833333 96.2272727 236 116 236 116 0 96.2272727 0"></polygon>
+        </g>
+    </g>
+</svg>

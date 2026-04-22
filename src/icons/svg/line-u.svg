@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="355px" height="355px" viewBox="0 0 355 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-2" stroke-opacity="0" fill="none" stroke="#979797" x="0.5" y="0.5" width="354" height="354"></rect>
+        <path d="M242,32 L242,70.602 L161,70.6020408 C154.474543,70.6020408 149.165607,75.8105852 149.0038,82.297066 L149,82.6020408 L149,271.408163 C149,277.93362 154.208544,283.242556 160.695025,283.404363 L161,283.408163 L242,283.408 L242,323 L142,323 C125.431458,323 112,309.568542 112,293 L112,62 C112,45.4314575 125.431458,32 142,32 L242,32 Z" id="Combined-Shape-Copy" fill="#000000" transform="translate(177.000000, 177.500000) rotate(-90.000000) translate(-177.000000, -177.500000) "></path>
+    </g>
+</svg>

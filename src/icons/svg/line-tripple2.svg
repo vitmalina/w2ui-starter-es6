@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="463px" height="463px" viewBox="0 0 463 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="none" x="0" y="0" width="463" height="463"></rect>
+        <g  transform="translate(32.000000, 208.000000)" fill="#444444" fill-rule="nonzero">
+            <rect x="0" y="0" width="80" height="43"></rect>
+            <rect x="160" y="0" width="80" height="43"></rect>
+            <rect x="320" y="0" width="80" height="43"></rect>
+        </g>
+        <g transform="translate(7.000000, 104.000000)" fill="#444444" fill-rule="nonzero">
+            <rect x="0" y="0" width="450" height="35"></rect>
+        </g>
+        <g transform="translate(7.000000, 317.000000)" fill="#444444" fill-rule="nonzero">
+            <rect x="0" y="0" width="450" height="36"></rect>
+        </g>
+    </g>
+</svg>

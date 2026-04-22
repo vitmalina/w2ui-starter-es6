@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="463px" height="463px" viewBox="0 0 463 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-39" fill="none" x="0" y="0" width="463" height="463"></rect>
+        <g id="mouse-click-copy-4" transform="translate(111.000000, 57.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M157.404554,208.407486 L267.057754,309 L315,261.03618 L207.640817,162.256008 L264.603748,104.600809 L39,41 L102.876793,265.633396 L157.404554,208.407486 Z M86.1392789,319.242081 L0,0 L318.922456,86.2012163 L247.330603,157.889211 L352,255.310733 L262.376162,345 L157.731132,247.578479 L86.1392789,319.242081 Z" id="interaction-click"></path>
+        </g>
+        <circle id="Oval" fill="#000000" cx="41.5" cy="180.5" r="31.5"></circle>
+        <circle id="Oval-Copy-4" fill="#000000" cx="41.5" cy="265.5" r="31.5"></circle>
+        <circle id="Oval-Copy-5" fill="#000000" cx="41.5" cy="356.5" r="31.5"></circle>
+    </g>
+</svg>

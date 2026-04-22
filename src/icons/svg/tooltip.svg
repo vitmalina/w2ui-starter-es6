@@ -1,5 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve">
-<g>
-	<path class="st0" d="M87.5,17.5h-75C8.4,17.5,5,20.9,5,25v50c0,4.1,3.4,7.5,7.5,7.5H40L50,95l10-12.5h27.5c4.1,0,7.5-3.4,7.5-7.5   V25C95,20.9,91.6,17.5,87.5,17.5z M87.5,75h-75V25h75V75z"/><rect x="25" y="35" class="st0" width="50" height="5"/><rect x="25" y="47.5" class="st0" width="50" height="5"/><rect x="25" y="60" class="st0" width="35" height="5"/>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="306px" height="288px" viewBox="0 0 306 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tooltip" fill="#000000" fill-rule="nonzero">
+            <path d="M280.5,0 C294.44,0 306,10.2658065 306,22.6451613 L306,22.6451613 L306,173.612903 C306,185.992258 294.44,196.258065 280.5,196.258065 L280.5,196.258065 L187,196.258065 L153,234 L119,196.258065 L25.5,196.258065 C11.56,196.258065 0,185.992258 0,173.612903 L0,173.612903 L0,22.6451613 C0,10.2658065 11.56,0 25.5,0 L25.5,0 Z M280.5,22.6451613 L25.5,22.6451613 L25.5,173.612903 L123.929,173.612 L154.689936,206.148747 L185.449,173.612 L280.5,173.612903 L280.5,22.6451613 Z" id="Combined-Shape"></path>
+            <rect id="Rectangle" x="68" y="53" width="170" height="15"></rect>
+            <rect id="Rectangle" x="68" y="90" width="170" height="15"></rect>
+        </g>
+        <rect id="Rectangle" stroke="#979797" fill="#000000" x="67.5" y="251.5" width="166" height="36"></rect>
+    </g>
 </svg>

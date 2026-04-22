@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="411px" height="410px" viewBox="0 0 411 410" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-38" fill="none" transform="translate(206.000000, 205.000000) rotate(180.000000) translate(-206.000000, -205.000000) " x="1" y="0" width="410" height="410"></rect>
+        <g id="Group-2-Copy" transform="translate(127.500000, 196.000000) rotate(180.000000) translate(-127.500000, -196.000000) translate(0.000000, 38.000000)" fill="#000000">
+            <g id="arrow-normal" transform="translate(173.000000, 158.000000) rotate(90.000000) translate(-173.000000, -158.000000) translate(15.000000, 76.000000)" fill-rule="nonzero">
+                <polygon id="Path" points="157.966839 61.1984859 257.826325 164 316 164 157.964944 0 0 164 57.1920964 164"></polygon>
+            </g>
+            <g id="capacitor-copy" transform="translate(0.000000, 107.000000)">
+                <ellipse id="Oval-Copy-2" cx="51.0301205" cy="51" rx="51.0301205" ry="51"></ellipse>
+            </g>
+        </g>
+        <polygon id="Path" fill="#000000" fill-rule="nonzero" transform="translate(327.000000, 197.000000) rotate(90.000000) translate(-327.000000, -197.000000) " points="326.966839 176.198486 426.826325 279 485 279 326.964944 115 169 279 226.192096 279"></polygon>
+    </g>
+</svg>

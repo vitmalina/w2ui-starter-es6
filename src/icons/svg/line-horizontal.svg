@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="463px" height="463px" viewBox="0 0 463 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="none" x="0" y="0" width="463" height="463"></rect>
+        <g transform="translate(231.000000, 228.500000) rotate(-90.000000) translate(-231.000000, -228.500000) translate(140.000000, 52.000000)" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path" points="0.66658686 262.405723 91.1765869 352.915723 181.686587 262.405723 113.803587 262.405723 113.803587 0.365723331 68.5495869 0.365723331 68.5495869 262.405723"></polygon>
+        </g>
+    </g>
+</svg>

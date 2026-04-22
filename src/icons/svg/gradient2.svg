@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="463px" height="463px" viewBox="0 0 463 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-69" fill="none" x="0" y="0" width="463" height="463"></rect>
+        <path d="M234,5 C360.473208,5 463,107.526792 463,234 C463,360.473208 360.473208,463 234,463 L229,463 C102.526792,463 0,360.473208 0,234 C0,107.526792 102.526792,5 229,5 L234,5 Z M234,26 L229,26 C114.124772,26 21,119.124772 21,234 C21,347.726476 112.271589,440.13533 225.56034,441.972134 L229,442 L234,442 C348.875228,442 442,348.875228 442,234 C442,120.273524 350.728411,27.8646705 237.43966,26.0278661 L234,26 Z" id="Rectangle-Copy-68" fill="#000000" fill-rule="nonzero"></path>
+        <polygon id="Path-6-Copy-2" fill="#000000" fill-rule="nonzero" points="310.677337 180 377 234 310.677337 288 310.677337 244.314607 86 244.314607 86 223.685393 310.677337 223.685393"></polygon>
+    </g>
+</svg>

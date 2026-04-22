@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="463px" height="464px" viewBox="0 0 463 464" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-17" fill="none" x="0" y="0.885822331" width="463" height="463"></rect>
+        <g id="Group-3" transform="translate(33.000000, 131.000000)" fill="#444444" fill-rule="nonzero">
+            <g id="line-curve2-copy-12">
+                <polygon id="Rectangle" transform="translate(99.745832, 99.492427) rotate(45.000000) translate(-99.745832, -99.492427) " points="-29.8520328 88.8696514 229.343697 88.8696514 229.343697 110.115203 -29.8520328 110.115203"></polygon>
+            </g>
+            <g id="line-curve2-copy-13">
+                <polygon id="Rectangle" transform="translate(99.492427, 99.254168) rotate(-45.000000) translate(-99.492427, -99.254168) " points="-30.1054375 88.6313922 229.090292 88.6313922 229.090292 109.876944 -30.1054375 109.876944"></polygon>
+            </g>
+        </g>
+        <polygon id="Path-Copy-2" fill="#000000" fill-rule="nonzero" points="261.001656 205 261 248 446.979302 248 447 205.053136"></polygon>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="290px" height="290px" viewBox="0 0 290 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="transistor">
+            <rect id="box" fill="none" transform="translate(145.000000, 145.000000) rotate(180.000000) translate(-145.000000, -145.000000) " x="0" y="0" width="290" height="290"></rect>
+            <path d="M144.5,22 C212.707167,22 268,77.2928334 268,145.5 C268,213.707167 212.707167,269 144.5,269 C76.2928334,269 21,213.707167 21,145.5 C21,77.2928334 76.2928334,22 144.5,22 Z M144,46 C88.771525,46 44,90.771525 44,146 C44,201.228475 88.771525,246 144,246 C199.228475,246 244,201.228475 244,146 C244,90.771525 199.228475,46 144,46 Z" id="Combined-Shape" fill="#020202"></path>
+        </g>
+        <rect id="Rectangle" fill="#060606" x="98" y="77" width="24" height="140"></rect>
+        <rect id="Rectangle-Copy-22" fill="#060606" transform="translate(150.807612, 118.692388) rotate(45.000000) translate(-150.807612, -118.692388) " x="138.807612" y="65.1923882" width="24" height="107"></rect>
+        <rect id="Rectangle-Copy-23" fill="#060606" transform="translate(149.807612, 175.307612) rotate(135.000000) translate(-149.807612, -175.307612) " x="137.807612" y="121.807612" width="24" height="107"></rect>
+    </g>
+</svg>

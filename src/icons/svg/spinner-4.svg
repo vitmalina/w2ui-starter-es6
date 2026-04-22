@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="463px" height="463px" viewBox="0 0 463 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-42" fill="none" x="0" y="0" width="463" height="463"></rect>
+        <g id="direction-alt-copy-2" transform="translate(0.000000, 72.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Group-2-Copy" transform="translate(82.000000, 158.000000) rotate(180.000000) translate(-82.000000, -158.000000) ">
+                <g id="arrow-normal" transform="translate(82.000000, 158.000000) rotate(90.000000) translate(-82.000000, -158.000000) translate(-76.000000, 76.000000)">
+                    <polygon id="Path" points="157.966839 61.1984859 257.826325 164 316 164 157.964944 0 0 164 57.1920964 164"></polygon>
+                </g>
+            </g>
+            <polygon id="Path" transform="translate(381.000000, 161.000000) rotate(90.000000) translate(-381.000000, -161.000000) " points="380.966839 140.198486 480.826325 243 539 243 380.964944 79 223 243 280.192096 243"></polygon>
+        </g>
+        <g id="line-curve2-copy-20" transform="translate(232.000000, 231.000000) rotate(90.000000) translate(-232.000000, -231.000000) translate(171.500000, 213.500000)" fill="#444444" fill-rule="nonzero">
+            <rect id="Rectangle" x="0.435483871" y="0.564516129" width="120" height="33.8709677"></rect>
+        </g>
+    </g>
+</svg>

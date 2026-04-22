@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="748px" height="694px" viewBox="0 0 748 694" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M486,0 C511.405098,0 532,20.5949015 532,46 L532,278.884 L481,265.109 L481,51 L51,51 L51,357 L283.875,357 L297.645,408 L46,408 C20.5949015,408 0,387.405098 0,362 L0,46 C0,20.5949015 20.5949015,0 46,0 L486,0 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+        <g id="mouse-click-copy-2" transform="translate(266.000000, 222.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M216.306695,253.948334 L359.412562,387.081667 L397.134767,349.348334 L253.995577,216.215 L321.075787,149.148334 L85.7452109,85.5816672 L149.293131,320.981667 L216.306695,253.948334 Z M118.402244,436.715 L0.603660937,0.448334375 L436.741667,118.248334 L338.837216,216.215 L481.976406,349.348334 L359.412562,471.915 L216.306695,338.781667 L118.402244,436.715 Z" id="interaction-click"></path>
+        </g>
+    </g>
+</svg>

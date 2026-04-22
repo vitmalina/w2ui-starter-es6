@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="374px" height="290px" viewBox="0 0 374 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="none" transform="translate(201.000000, 145.000000) rotate(180.000000) translate(-201.000000, -145.000000) " x="56" y="0" width="290" height="290"></rect>
+        <path d="M162.823692,254.915979 L49.7185841,279 L45,154.048377 C76.9354189,179.521901 92.9031283,192.258663 92.9031283,192.258663 C143.519801,115.139739 179.177919,91.3236017 270.734347,73.4847918 L253.649868,10 L357,66.8580532 L295.643332,163.219522 L280.124365,106.462628 C202.467798,119.080173 158.330101,159.0682 119.936871,217.053392 C119.936871,217.053392 134.232478,229.674255 162.823692,254.915979 Z" id="Path" fill="#000000" fill-rule="nonzero" transform="translate(201.000000, 144.500000) rotate(34.000000) translate(-201.000000, -144.500000) "></path>
+    </g>
+</svg>

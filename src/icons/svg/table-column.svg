@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="321px" height="332px" viewBox="0 0 321 332" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>table-column</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="table-column" transform="translate(160.500000, 166.000000) rotate(90.000000) translate(-160.500000, -166.000000) translate(-5.000000, 6.000000)" fill="#000000" fill-rule="nonzero">
+            <rect id="Rectangle" x="0" y="122" width="331" height="76"></rect>
+            <path d="M331,0 L331,58 L0,58 L0,0 L331,0 Z M324,7 L7,7 L7,51 L324,51 L324,7 Z" id="Rectangle"></path>
+            <path d="M331,262 L331,320 L0,320 L0,262 L331,262 Z M324,269 L7,269 L7,313 L324,313 L324,269 Z" id="Rectangle-Copy-34"></path>
+        </g>
+    </g>
+</svg>
