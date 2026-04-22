@@ -91,9 +91,9 @@ let tasks = {
                    '    <title>icon-font</title>\n'+
                    '    <style>\n'+
                    '        body { font-family: verdana; font-size: 13px }\n'+
-                   '        .preview { padding: 8px; margin: 4px; width: 200px; box-shadow: 1px 1px 2px #ccc; float: left } \n'+
+                   '        .preview { padding: 9px 9px; margin: 6px; width: 228px; box-shadow: 1px 1px 2px #ccc; float: left; background-color: white; font-size: 14px; border-radius: 5px; }\n'+
                    '        .preview:hover { background-color: #f5f5f5 } \n'+
-                   '        .preview span.icon { font-size: 16px; padding: 8px }\n'+
+                   '        .preview span.icon { font-size: 18px; padding: 8px }\n'+
                    '    </style>\n' +
                    '</head>\n'+
                    '<body>\n'+
