@@ -31,6 +31,13 @@ app.router.add({
             <div class="w2ui-centered" style="font-size: 16px; color: gray">
                 You can refresh this page, it will still come to this sidebar item
             </div>`)
+    },
+
+    '/home/icons'(event) {
+        w2ui.main_sb.select('icons')
+        w2ui.app_layout.html('main', `
+            <iframe src="${app.context}icons/preview.html"
+                style="width: 100%; height: 100%; border: 0; display: block;"></iframe>`)
     }
 })
 app.main = { prefs }

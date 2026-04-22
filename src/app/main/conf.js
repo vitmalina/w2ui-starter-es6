@@ -66,6 +66,7 @@ export default {
                 nodes: [
                     { id: 'home', text: 'Home', icon: 'icon-home', route: '/home' },
                     { id: 'other', text: 'Other', icon: 'icon-callouts', route: '/home/other' },
+                    { id: 'icons', text: 'Icons', icon: 'icon-star', route: '/home/icons' },
                 ],
             }
         ]
