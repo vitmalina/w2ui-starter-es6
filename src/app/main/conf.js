@@ -87,13 +87,14 @@ export default {
             { field: 'phone', text: 'Phone',      size: '130px', searchable: true },
             { field: 'department', text: 'Department', size: '120px', searchable: true, sortable: true },
             { field: 'role',   text: 'Role',   size: '110px', searchable: true, sortable: true },
-            { field: 'status', text: 'Status', size: '100%',  searchable: true, sortable: true,
+            { field: 'status', text: 'Status', size: '100px',  searchable: true, sortable: true,
                 render(record) {
                     let colors = { Active: '#2a9d3e', Inactive: '#888', Pending: '#d68f00' }
                     let c = colors[record.status] || '#333'
                     return `<span style="color: ${c}; font-weight: 600;">${record.status ?? ''}</span>`
                 }
-            }
+            },
+            { field: 'comments', text: 'Comments', size: '100%', searchable: true }
         ],
         onAdd(event) {
             app.main.openUserForm()
@@ -129,11 +130,13 @@ export default {
               html: { label: 'Role',       attr: 'style="width: 300px"' } },
             { field: 'status', type: 'list',
               options: { items: ['Active', 'Inactive', 'Pending'] },
-              html: { label: 'Status',     attr: 'style="width: 300px"' } }
+              html: { label: 'Status',     attr: 'style="width: 300px"' } },
+            { field: 'comments', type: 'textarea',
+              html: { label: 'Comments', attr: 'style="width: 300px; height: 80px"' } }
         ],
         record: {
             fname: '', lname: '', email: '', phone: '',
-            department: '', role: '', status: 'Active'
+            department: '', role: '', status: 'Active', comments: ''
         },
         actions: {
             Save() {
