@@ -142,6 +142,9 @@ a:hover {
   background-color: #f5f6f8 !important;
 }
 /* Sidebar */
+.w2ui-sidebar .w2ui-sidebar-top {
+  top: 7px;
+}
 .w2ui-sidebar .w2ui-sidebar-top .w2ui-flat-left,
 .w2ui-sidebar .w2ui-sidebar-top .w2ui-flat-right {
   height: 28px;
@@ -227,6 +230,7 @@ a:hover {
 }
 .w2ui-sidebar .w2ui-sidebar-body .w2ui-node-group:first-child {
   border-top: none;
+  margin-top: 0;
 }
 .w2ui-sidebar .w2ui-sidebar-body .w2ui-node-flat:not(.sidebar-button) {
   padding: 6px 0;
